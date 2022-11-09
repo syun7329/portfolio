@@ -1,0 +1,40 @@
+{
+  "name": "wp_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "_gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://obscure723@github.com/hamoni-jp/wp_template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamoni-jp/wp_template/issues"
+  },
+  "homepage": "https://github.com/hamoni-jp/wp_template#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^4.0.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-progeny": "^0.4.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob-use-forward": "^0.1.3",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
+}

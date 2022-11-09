@@ -1,0 +1,14 @@
+@use "../mixin/responsive" as *;
+@use "sass:math";
+
+@function vh($pixelsVh, $breakpoint: null) {
+  $baseWidth: 1280;
+
+  @if ($breakpoint == "pc") {
+    $baseWidth: 1280;
+  } @else if ($breakpoint == "tab" or $breakpoint == "sp") {
+    $baseWidth: 375;
+  }
+
+  @return math.div($pixelsVh, $baseWidth) * 100vh;
+}

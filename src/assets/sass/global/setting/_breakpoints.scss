@@ -1,0 +1,11 @@
+$breakpoints: (
+  "sp": (
+    max-width: 480px,
+  ),
+  "tab": (
+    max-width: 800px,
+  ),
+  "pc": (
+    max-width: 1280px,
+  ),
+) !default;

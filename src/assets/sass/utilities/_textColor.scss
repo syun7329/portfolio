@@ -1,0 +1,7 @@
+@use "../global/" as *;
+
+.color\: {
+  &black {
+    color: $black;
+  }
+}
