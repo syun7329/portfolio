@@ -1,0 +1,28 @@
+@use "../global/" as *;
+
+.single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    width: 100%;
+  }
+
+  &__main {
+    width: 80%;
+    @include py_vw(80, 40);
+  }
+
+  &__thumbnailWrapper {
+    @include aspectRatio(460, 1002);
+  }
+
+  &__thumbnail {
+    filter: grayscale(1);
+  }
+
+  &__content {
+    @include pt_vw(24);
+  }
+}

@@ -1,0 +1,54 @@
+@use "../global/" as *;
+
+.about {
+  &__inner {
+    display: flex;
+
+    @include responsive(tab) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include ml_vw(56, 0);
+  }
+
+  &__detail {
+    @include pt_vw(24, 16);
+    margin-right: 20vw;
+
+    @include fz_vw(16);
+    line-height: 2;
+
+    @include responsive(tab) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+  }
+
+  &__button {
+    @include h_vw(62);
+    @include mt_vw(0, 24);
+
+    @include responsive(tab) {
+      margin-left: 10vw;
+    }
+
+    & > .marquee {
+      height: 100%;
+
+      & > .marquee__text {
+        top: 25%;
+      }
+    }
+  }
+}

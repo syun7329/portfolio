@@ -1,0 +1,30 @@
+@use "../global/" as *;
+
+.top {
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    @include pt_vw($s17);
+  }
+
+  &__marquee {
+    position: relative;
+    @include h_vw(79, 40);
+  }
+
+  &__nav {
+    @include mt_vw($s7, $s3);
+  }
+
+  &__img {
+    display: block;
+    @include mt_vw($s12);
+  }
+
+  &__scrollNavigator {
+    display: flex;
+    justify-content: center;
+    @include py_vw(24);
+  }
+}

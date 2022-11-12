@@ -20,7 +20,7 @@ if(isset($_GET['taxonomy']) && isset($_GET['term'])) {
 <section class="blog">
 	<div class="blog__body">
 		<main class="blog__body__cardErea">
-			<?= $blogs ?>
+			<?php echo $blogs ?>
 		</main>
 	</div>
 </section>

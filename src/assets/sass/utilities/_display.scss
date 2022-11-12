@@ -1,0 +1,41 @@
+@use "../global/" as *;
+
+.underTabVisible {
+  display: none !important;
+  @include responsive(tab) {
+    display: block !important;
+  }
+}
+
+.underTabNone {
+  @include responsive(tab) {
+    display: none !important;
+  }
+}
+
+.underPcVisible {
+  display: none !important;
+  @include responsive(pc) {
+    display: block !important;
+  }
+}
+
+.underPcNone {
+  @include responsive(pc) {
+    display: none !important;
+  }
+}
+
+.indentWord {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  display: inline-block;
+}
+
+.inlineBlock {
+  display: inline-block;
+  font: inherit;
+}

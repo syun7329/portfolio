@@ -1,0 +1,71 @@
+@use "../global/" as *;
+
+.businessList {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    position: relative;
+    @include w_vw(824);
+
+    @include responsive(tab) {
+      width: 100%;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background: $black;
+    }
+
+    .businessList__text--en {
+      transition: 5s;
+    }
+
+    &:hover {
+      .businessList__text--en {
+        animation: hoverSlideAnimation 0.5s ease-in forwards;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include py_vw(56, 24);
+    @include pr_vw(136, 0);
+
+    color: $black;
+
+    @include responsive(tab) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    transition: $transition;
+
+    &--en {
+      @include fz_vw(80, 32);
+    }
+
+    &--ja {
+      @include fz_vw(16, 12);
+
+      @include pt_vw(0, 8);
+    }
+  }
+}

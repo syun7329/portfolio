@@ -1,4 +1,66 @@
 @use "../global/" as *;
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: $layer3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  background: transparent;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    width: 90%;
+
+    @include py_vw(24);
+  }
+
+  &__contact {
+    border-radius: 100px;
+    background: $white;
+    border: 1px solid $black;
+
+    @include px_vw(32);
+    @include py_vw(8);
+
+    color: $black;
+
+    @include fz_vw(12);
+  }
+
+  &__logoArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    // top: vw(24);
+    left: 0;
+    right: 0;
+
+    margin: auto;
+  }
+
+  &__logo {
+    object-fit: cover;
+    @include w_vw(50);
+  }
+
+  &__hamburger {
+    @include w_vw(50);
+    @include h_vw(50);
+  }
 }

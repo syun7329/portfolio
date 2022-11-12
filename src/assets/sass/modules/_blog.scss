@@ -1,0 +1,51 @@
+@use "../global/" as *;
+
+.blog {
+  position: relative;
+  overflow: hidden;
+
+  &__list {
+    &--pc {
+      position: relative;
+      @include responsive(tab) {
+        display: none;
+      }
+    }
+
+    &--sp {
+      display: none;
+      position: relative;
+      @include responsive(tab) {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+  }
+
+  &__listWrapper {
+    padding-bottom: $spacing-10;
+    position: relative;
+    overflow: hidden;
+    padding-left: 10%;
+  }
+
+  &__buttons {
+    position: absolute;
+    z-index: 3;
+    bottom: 2.5%;
+    left: 82%;
+
+    width: 100px;
+    height: 32px;
+
+    @include responsive(tab) {
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+    }
+  }
+}

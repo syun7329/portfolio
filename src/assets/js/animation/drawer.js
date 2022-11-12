@@ -91,7 +91,8 @@ $(document).on('click', '.drawer-menu-item', function() {
 					r.trigger(s.settings.events.close);
 				}
         return o = r.data(t).options, n && r.off("touchmove." + t), r.removeClass(s.settings["class"].open).addClass(s.settings["class"].close).css({
-          overflow: "auto"
+          
+          : "auto"
 				}).drawerCallback(function () {
           s.settings.state = !1, r.trigger(s.settings.events.closed)
         })

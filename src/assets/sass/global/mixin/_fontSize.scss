@@ -1,0 +1,15 @@
+@use "./responsive" as r;
+@use "../functions/" as f;
+
+// font-size-vw
+@mixin fz_vw($font_size_pc, $font_size_sp: null) {
+  font-size: f.vw($font_size_pc);
+
+  @include r.responsive(tab) {
+    @if ($font_size_sp) {
+      font-size: f.vw($font_size_sp, tab);
+    } @else {
+      font-size: f.vw($font_size_pc, tab);
+    }
+  }
+}

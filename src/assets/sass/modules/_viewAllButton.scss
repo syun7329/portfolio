@@ -1,0 +1,22 @@
+@use "../global/" as *;
+
+.viewAllButton {
+  display: block;
+  position: relative;
+
+  width: 100vw;
+
+  overflow: hidden;
+
+  border-radius: 100px;
+  color: $black;
+  background: $white;
+  border: solid 2px $black;
+
+  transition: $transition;
+
+  &:hover {
+    color: $white;
+    background: $black;
+  }
+}

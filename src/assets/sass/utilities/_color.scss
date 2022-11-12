@@ -1,0 +1,9 @@
+@use "../global" as *;
+.c\: {
+  &white {
+    color: $white;
+  }
+  &black {
+    color: $black;
+  }
+}

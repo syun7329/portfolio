@@ -1,0 +1,23 @@
+@use "../global/" as *;
+
+.business {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inner {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    @include responsive(tab) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__list {
+  }
+
+  &__title {
+  }
+}

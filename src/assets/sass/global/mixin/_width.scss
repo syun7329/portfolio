@@ -1,0 +1,14 @@
+@use "./responsive" as r;
+@use "../functions/" as f;
+
+@mixin w_vw($pc, $sp: null) {
+  width: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      width: f.vw($sp, tab);
+    } @else {
+      width: f.vw($pc, tab);
+    }
+  }
+}

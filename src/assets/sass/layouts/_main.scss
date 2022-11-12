@@ -1,0 +1,11 @@
+@use "../global/" as *;
+
+.main {
+  &__inner {
+    @include pb_vw(160, 80);
+
+    & > section + section {
+      @include mt_vw(160, 80);
+    }
+  }
+}

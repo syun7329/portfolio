@@ -1,0 +1,14 @@
+@use "../global/" as *;
+
+.sectionTitle {
+  @include responsive(tab) {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--business,
+  &--clients {
+    position: sticky;
+    top: 0;
+  }
+}

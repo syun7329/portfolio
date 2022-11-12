@@ -1,0 +1,111 @@
+@use "./responsive" as r;
+@use "../functions/" as f;
+
+// margin-top
+@mixin mt_vw($pc, $sp: null) {
+  margin-top: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      margin-top: f.vw($sp, tab);
+    } @else {
+      margin-top: f.vw($pc, tab);
+    }
+  }
+}
+
+// margin-right
+@mixin mr_vw($pc, $sp: null) {
+  margin-right: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      margin-right: f.vw($sp, tab);
+    } @else {
+      margin-right: f.vw($pc, tab);
+    }
+  }
+}
+
+// margin-bottom
+@mixin mb_vw($pc, $sp: null) {
+  margin-bottom: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      margin-bottom: f.vw($sp, tab);
+    } @else {
+      margin-bottom: f.vw($pc, tab);
+    }
+  }
+}
+
+// margin-left
+@mixin ml_vw($pc, $sp: null) {
+  margin-left: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      margin-left: f.vw($sp, tab);
+    } @else {
+      margin-left: f.vw($pc, tab);
+    }
+  }
+}
+
+// margin-x
+@mixin mx_vw($pc, $sp: null) {
+  margin: {
+    left: f.vw($pc);
+    right: f.vw($pc);
+  }
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      margin: {
+        left: f.vw($sp, tab);
+        right: f.vw($sp, tab);
+      }
+    } @else {
+      margin: {
+        left: f.vw($pc, tab);
+        right: f.vw($pc, tab);
+      }
+    }
+  }
+}
+
+// margin-y
+@mixin my_vw($pc, $sp: null) {
+  margin: {
+    top: f.vw($pc);
+    bottom: f.vw($pc);
+  }
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      margin: {
+        top: f.vw($sp, tab);
+        bottom: f.vw($sp, tab);
+      }
+    } @else {
+      margin: {
+        top: f.vw($pc, tab);
+        bottom: f.vw($pc, tab);
+      }
+    }
+  }
+}
+
+// margin
+@mixin m_vw($pc, $sp: null) {
+  margin: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      margin: f.vw($sp, tab);
+    } @else {
+      margin: f.vw($pc, tab);
+    }
+  }
+}

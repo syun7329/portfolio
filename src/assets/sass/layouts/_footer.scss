@@ -1,4 +1,52 @@
 @use "../global/" as *;
 
 .footer {
+  width: 100%;
+  background: $black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inner {
+    width: 80%;
+    @include pt_vw(100);
+    @include pb_vw(70);
+  }
+
+  &__main {
+  }
+
+  &__contact {
+  }
+
+  &__nav {
+  }
+
+  &__info {
+  }
+
+  &__detail {
+  }
+
+  &__sns {
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mt_vw(48);
+    @include pt_vw(16);
+
+    border-top: 1px solid $white;
+  }
+
+  &__logo {
+  }
+
+  &__copyRight {
+    color: $white;
+  }
 }

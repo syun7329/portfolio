@@ -1,0 +1,29 @@
+@use "../global/" as *;
+
+.clientsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+
+  gap: vw(40);
+
+  @include responsive(tab) {
+    gap: vw(24, tab);
+  }
+
+  &__item {
+    @include w_vw(278);
+    @include h_vw(278);
+    background: red;
+    border: solid 1px $black;
+
+    @include responsive(tab) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__image {
+    @include aspectRatio(1, 1);
+  }
+}

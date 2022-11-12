@@ -1,0 +1,111 @@
+@use "./responsive" as r;
+@use "../functions/" as f;
+
+// padding-top
+@mixin pt_vw($pc, $sp: null) {
+  padding-top: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      padding-top: f.vw($sp, tab);
+    } @else {
+      padding-top: f.vw($pc, tab);
+    }
+  }
+}
+
+// padding-right
+@mixin pr_vw($pc, $sp: null) {
+  padding-right: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      padding-right: f.vw($sp, tab);
+    } @else {
+      padding-right: f.vw($pc, tab);
+    }
+  }
+}
+
+// padding-bottom
+@mixin pb_vw($pc, $sp: null) {
+  padding-bottom: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      padding-bottom: f.vw($sp, tab);
+    } @else {
+      padding-bottom: f.vw($pc, tab);
+    }
+  }
+}
+
+// padding-left
+@mixin pl_vw($pc, $sp: null) {
+  padding-left: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      padding-left: f.vw($sp, tab);
+    } @else {
+      padding-left: f.vw($pc, tab);
+    }
+  }
+}
+
+// padding-x
+@mixin px_vw($pc, $sp: null) {
+  padding: {
+    left: f.vw($pc);
+    right: f.vw($pc);
+  }
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      padding: {
+        left: f.vw($sp, tab);
+        right: f.vw($sp, tab);
+      }
+    } @else {
+      padding: {
+        left: f.vw($pc, tab);
+        right: f.vw($pc, tab);
+      }
+    }
+  }
+}
+
+// padding-y
+@mixin py_vw($pc, $sp: null) {
+  padding: {
+    top: f.vw($pc);
+    bottom: f.vw($pc);
+  }
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      padding: {
+        top: f.vw($sp, tab);
+        bottom: f.vw($sp, tab);
+      }
+    } @else {
+      padding: {
+        top: f.vw($pc, tab);
+        bottom: f.vw($pc, tab);
+      }
+    }
+  }
+}
+
+// padding
+@mixin p_vw($pc, $sp: null) {
+  padding: f.vw($pc);
+
+  @include r.responsive(tab) {
+    @if ($sp) {
+      padding: f.vw($sp, tab);
+    } @else {
+      padding: f.vw($pc, tab);
+    }
+  }
+}

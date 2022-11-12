@@ -1,0 +1,37 @@
+@use "../global/" as *;
+
+.topNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: vw(32, 16);
+
+    justify-content: center;
+
+    @include responsive(tab) {
+      width: 80%;
+      gap: vw(24, tab), vw(32, tab);
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+
+    color: $black;
+    transition: $transition;
+
+    @include p_vw(8, 8);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

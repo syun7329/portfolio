@@ -1,0 +1,102 @@
+@use "../global/" as *;
+
+.contactForm {
+  &--layout {
+    margin-top: $spacing-7;
+    @include responsive(tab) {
+      margin-top: $spacing-4;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-4;
+
+    @include responsive(tab) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__th {
+    font-weight: bold;
+    min-width: 216px;
+
+    &--alignTop {
+      align-self: flex-start;
+      margin-top: $spacing-2;
+    }
+  }
+
+  &__td {
+    flex: 1;
+
+    @include responsive(tab) {
+      width: 100%;
+      margin-top: $spacing-1;
+    }
+  }
+
+  &__required {
+    color: #ff0000;
+  }
+
+  &__input,
+  &__textarea {
+    background-color: #f2f2f2;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+
+    &--small {
+      width: 50%;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input {
+    height: 45px;
+  }
+
+  &__textarea {
+    min-height: 170px;
+  }
+
+  &__submitWrapper {
+    display: flex;
+    justify-content: center;
+
+    &--layout {
+      margin-top: $spacing-6;
+    }
+  }
+
+  &__submit {
+    width: 217px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__successMsg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $spacing-2;
+    opacity: 0;
+  }
+}
+
+.wpcf7-spinner {
+  display: none !important;
+}
+
+.wpcf7-response-output {
+  text-align: center;
+}

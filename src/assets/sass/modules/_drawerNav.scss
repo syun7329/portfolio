@@ -1,0 +1,103 @@
+@use "../global/" as *;
+
+.drawerNav {
+  position: fixed;
+  z-index: $layer2;
+
+  overflow: scroll;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
+
+  @include pt_vw(88);
+  background-color: $white;
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%);
+  }
+
+  &__head {
+    display: flex;
+
+    width: 80%;
+    margin-bottom: $spacing-2;
+  }
+
+  &__list {
+    width: 80%;
+    border-top: 1px solid $gray;
+    padding: 3vh 0;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 0;
+    color: $green;
+  }
+
+  &__text {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  &__arrow {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  &__buttons {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid $gray;
+
+    padding: {
+      top: 3vh;
+      bottom: 3vh;
+    }
+
+    & > * + * {
+      margin-top: $spacing-2;
+    }
+  }
+
+  &__copyRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    padding-top: $spacing-5;
+
+    color: $gray;
+    border-top: 1px solid $gray;
+
+    @include responsive(tab) {
+      padding-top: 3vh;
+    }
+  }
+}
+
+.drawer--right .drawer-nav {
+  right: -100vw;
+}
+.drawer-menu-item {
+  padding: 0 !important;
+}

@@ -83,5 +83,38 @@ mark,
 audio,
 video {
   font-size: 62.5%;
-  scroll-behavior: smooth;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+@font-face {
+  font-family: "Didot";
+  src: url("../../font/Didot\ Regular.ttf") format("ttf");
+}
+body * {
+  @include fz_vw(16, 12);
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  font-family: Didot;
+}
+
+main {
+  flex: 1;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }

@@ -1,0 +1,11 @@
+@use "../global/" as *;
+
+.diary {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  &__inner {
+    width: 80%;
+  }
+}

@@ -1,0 +1,37 @@
+@use "../global/" as *;
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.marquee {
+  &__text {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    font-weight: bold;
+
+    & > span {
+      @include fz_vw(64, 32);
+    }
+
+    &--viewAllButton {
+      & > span {
+        @include fz_vw(32, 16);
+      }
+    }
+
+    &--2 {
+      animation-delay: 15s;
+    }
+  }
+}
