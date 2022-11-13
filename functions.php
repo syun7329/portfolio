@@ -19,27 +19,28 @@ require_once(__DIR__ . '/includes/components/Archive.php');
 // ===============================================================================
 
 // OGP
-const OG_URL         =  "https://coool.co.jp";
-const OG_TITLE       =  "COOOL TURF (クールターフ) - 天然芝を本気で追求した、まったく新しい人工芝";
-const OG_SITE_NAME   =  "COOOL株式会社";
+const OG_URL         =  "https://gc-ltd.jp";
+const OG_TITLE       =  "有限会社GC";
+const OG_SITE_NAME   =  "有限会社GC";
 
 // META
-const META_DESCRIPTION     = "「COOOL TURF」(クールターフ)は従来の人工芝のあらゆる不満をすべて改善し、『快適な生活』を提供できる商品です。天然芝にも使用可能な冷却目土充填材『寒土』を充填することで、今まで我慢して使っていた人工芝から、快適に生活する緑の空間へと変えることが出来ます。";
+const META_DESCRIPTION     = "";
 
 // 外部リンク
-const COMPANY_LINK   =  "https://coool.co.jp/";
-const INSTAGRAM_LINK =  "https://instagram.com/coool_turf?utm_medium=copy_link";
-const YOUTUBE_LINK   =  "https://www.youtube.com/channel/UCVHW0pNy1AuRYFhbr0UCX2Q";
-const MAP_LINK       =  "https://goo.gl/maps/Z3AwUs9B5QbUu6j69";
+const COMPANY_LINK   =  "https://gc-ltd.jp";
+const INSTAGRAM_LINK =  "";
+const YOUTUBE_LINK   =  "";
+const TWITTER_LINK   =  "";
+const FACEBOOK_LINK   =  "";
+const MAP_LINK       =  "https://www.google.com/maps/place/%E3%80%92107-0052+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E8%B5%A4%E5%9D%82%EF%BC%97%E4%B8%81%E7%9B%AE%EF%BC%96%E2%88%92%EF%BC%91%EF%BC%95+%E8%B5%A4%E5%9D%82%E3%83%AD%E3%82%A4%E3%83%A4%E3%83%AB%E3%83%93%E3%83%AB/@35.6712786,139.73313,17z/data=!3m1!4b1!4m5!3m4!1s0x60188b8038dd07d7:0x7e4eeb0b906d65a5!8m2!3d35.6712786!4d139.73313";
 
 // 会社基本情報
-const PHONE_NUMBER   =  "0940-72-5186";
-const MAIL_ADDRESS   =  "info@coool.co.jp";
-const MAIL_LINK      =  "mailto:info@coool.co.jp";
-const POST_CODE      =  "811-3504";
-const ADDRESS        =  "福岡県宗像市深田582-1 世界遺産 宗像大社横";
-const BUSINESS_HOURS =  "";
-const HORIDAY        =  "";
+const PHONE_NUMBER   =  "03-6743-1144";
+const MAIL_ADDRESS   =  "";
+const MAIL_LINK      =  "";
+const POST_CODE      =  "107-0052";
+const ADDRESS        =  "東京都港区赤坂7-6-15-505";
+
 
 // ===============================================================================
 // 設定

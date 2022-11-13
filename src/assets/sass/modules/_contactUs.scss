@@ -1,8 +1,12 @@
 @use "../global/" as *;
 
 .contactUs {
-  display: flex;
   position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  @include pb_vw(16, 16);
 
   &::before {
     content: "";
@@ -13,7 +17,16 @@
     height: 1px;
     bottom: 0;
 
-    background: $black;
+    background: $white;
+  }
+
+  & > * + * {
+    @include ml_vw(32, 0);
+  }
+
+  @include responsive(tab) {
+    width: 100%;
+    justify-content: space-between;
   }
 
   &__text {
@@ -22,5 +35,8 @@
   }
 
   &__arrow {
+    fill: $white;
+    @include w_vw(36, 20.71);
+    @include h_vw(30, 17.26);
   }
 }

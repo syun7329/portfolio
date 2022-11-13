@@ -1,0 +1,15 @@
+@use "../global/" as *;
+
+.companyInfo {
+  &__title {
+    @include fz_vw(12, 12);
+    color: $white;
+  }
+
+  &__detail {
+    @include pt_vw(8);
+    @include fz_vw(12, 12);
+    color: $gray;
+    line-height: 2;
+  }
+}

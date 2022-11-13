@@ -36,7 +36,7 @@
   }
 
   &__button {
-    @include h_vw(62);
+    @include h_vw(62, 48);
     @include mt_vw(0, 24);
 
     @include responsive(tab) {
@@ -48,6 +48,10 @@
 
       & > .marquee__text {
         top: 25%;
+
+        @include responsive(tab) {
+          top: 36%;
+        }
       }
     }
   }

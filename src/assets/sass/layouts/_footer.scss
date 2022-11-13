@@ -15,12 +15,24 @@
   }
 
   &__main {
+    display: flex;
+    justify-content: space-between;
+    @include pt_vw(48, 56);
+
+    @include responsive(tab) {
+      flex-direction: column;
+
+      & > * + * {
+        @include mt_vw(0, 40);
+      }
+    }
   }
 
   &__contact {
   }
 
   &__nav {
+    flex-shrink: 0;
   }
 
   &__info {

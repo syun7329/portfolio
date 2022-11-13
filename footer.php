@@ -2,58 +2,104 @@
 
   <div class="footer__inner">
 
-    <div class="footer__main">
+    <div class="footer__contact contactUs">
+      <p class="contactUs__text">CONTACT US</p>
 
-      <div class="footer__contact contactUs">
-        <p class="contactUs__text">CONTACT US</p>
-        <img src="" alt="" class="contactUs__arrow">
-      </div>
+      <svg class="contactUs__arrow" xmlns="http://www.w3.org/2000/svg" width="38.414" height="32.828"
+        viewBox="0 0 38.414 32.828">
+        <g id="グループ_25" data-name="グループ 25" transform="translate(-580.5 -4136.086)">
+          <line id="線_26" data-name="線 26" x2="36" transform="translate(581.5 4152.5)" fill="none" stroke="#fff"
+            stroke-linecap="round" stroke-width="2" />
+          <line id="線_27" data-name="線 27" x2="15" y2="15" transform="translate(602.5 4137.5)" fill="none" stroke="#fff"
+            stroke-linecap="round" stroke-width="2" />
+          <line id="線_28" data-name="線 28" y1="15" x2="15" transform="translate(602.5 4152.5)" fill="none" stroke="#fff"
+            stroke-linecap="round" stroke-width="2" />
+        </g>
+      </svg>
+
+    </div>
+
+    <div class="footer__main">
 
       <ul class="footer__nav footerNav">
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">Service</a>
+          <a href="<?php echo home_url('home') ?>" class="footerNav__link">Home</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">Works</a>
+          <a href="<?php echo home_url() ?>" class="footerNav__link">Service</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">Recruit</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">Works</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">News</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">Recruit</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">About</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">News</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">Company</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">About</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">History</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">Company</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">Privacy Policy</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">History</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="" class="footerNav__link">Terms</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">Privacy Policy</a>
+        </li>
+
+        <li class="footerNav__item">
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">Terms</a>
         </li>
 
       </ul>
 
-      <div class="footer__info">
+      <div class="footer__detail">
 
-        <div class="footer__detail"></div>
+        <div class="footer__companyInfo companyInfo">
 
-        <div class="footer__sns">
+          <p class="companyInfo__title">
+            Tokyo Office
+          </p>
+
+          <p class="companyInfo__detail">
+            有限会社GC
+            〒<?php echo POST_CODE ?>&nbsp;&nbsp;<?php echo ADDRESS ?>
+          </p>
+
+        </div>
+
+        <div class="footer__sns sns">
+
+          <p class="sns__followUs">
+            Follow Us
+          </p>
+
+          <div class="sns__icons">
+            <a href="<?php echo TWITTER_LINK ?>" class="sns__link">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/" alt="" class="sns__icon">
+            </a>
+            <a href="<?php echo FACEBOOK_LINK ?>" class="sns__link">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/" alt="" class="sns__icon">
+            </a>
+            <a href="<?php echo INSTAGRAM_LINK ?>" class="sns__link">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/" alt="" class="sns__icon">
+            </a>
+            <a href="<?php echo YOUTUBE_LINK ?>" class="sns__link">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/" alt="" class="sns__icon">
+            </a>
+          </div>
 
         </div>
 

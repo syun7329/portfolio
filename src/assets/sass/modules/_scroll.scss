@@ -36,7 +36,6 @@
     }
 
     &::after {
-      background: $green;
       animation: move 2.5s infinite;
     }
   }
@@ -57,11 +56,9 @@
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background: $green;
   }
 
   &__text {
-    color: $green;
     padding-left: $spacing-2;
   }
 }

@@ -16,6 +16,7 @@
   }
 
   &__list {
+    @include mt_vw(0, 56);
   }
 
   &__title {
