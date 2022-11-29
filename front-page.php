@@ -77,12 +77,12 @@ $media = $postService->renderMedia('media', -1);
 
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
 
       <div class="about__inner">
 
-        <svg class="about__svg sectionTitle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.535 338.18">
-          <g id="グループ_2663" data-name="グループ 2663" transform="translate(-1658.575 1452.18)">
+        <svg class="about__svg sectionTitle " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.535 338.18">
+          <g class="borderTitleAnimation" id="グループ_2663" data-name="グループ 2663" transform="translate(-1658.575 1452.18)">
             <path id="パス_589" data-name="パス 589"
               d="M138.471-260.033,192.4-135.272H87.287ZM-11.425-6.4V0H74.948V-6.4H34.275L85-128.874h109.68L247.694-6.4h-42.5V0H358.745V-6.4h-39.3L175.488-338.18H163.149L26.963-6.4Z"
               transform="translate(1670 -1114)" />
