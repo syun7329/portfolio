@@ -20,6 +20,29 @@
   &__img {
     display: block;
     @include mt_vw($s12);
+
+    &--pc {
+      & > img {
+        width: 100%;
+      }
+
+      @include responsive(tab) {
+        display: none;
+      }
+    }
+
+    &--sp {
+      display: none;
+
+      & > img {
+        width: 100%;
+      }
+
+      @include responsive(tab) {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 
   &__scrollNavigator {

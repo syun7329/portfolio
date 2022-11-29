@@ -1,8 +1,18 @@
 @use "../global/" as *;
 
 .main {
+  overflow: hidden;
+
+  &--black {
+    background-color: $black;
+  }
+
   &__inner {
     @include pb_vw(160, 80);
+
+    &--pb0 {
+      padding-bottom: 0;
+    }
 
     & > section + section {
       @include mt_vw(160, 80);

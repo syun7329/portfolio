@@ -1,102 +1,63 @@
 @use "../global/" as *;
 
 .contactForm {
-  &--layout {
-    margin-top: $spacing-7;
-    @include responsive(tab) {
-      margin-top: $spacing-4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__inner {
+    width: 80%;
+
+    & > * + * {
+      @include mt_vw(64, 40);
     }
   }
 
-  &__row {
+  &__acceptance {
     display: flex;
-    align-items: center;
-    margin-bottom: $spacing-4;
+    color: $white;
 
-    @include responsive(tab) {
-      flex-direction: column;
-      align-items: flex-start;
+    @include mt_vw(64, 40);
+
+    .wpcf7-list-item {
+      margin: auto;
+
+      & > label {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
-  &__th {
-    font-weight: bold;
-    min-width: 216px;
+  &__privacyPolicyLink {
+    color: $white;
+    border-bottom: 1px solid $white;
+    @include mx_vw(8, 8);
+    transition: $transition;
 
-    &--alignTop {
-      align-self: flex-start;
-      margin-top: $spacing-2;
-    }
-  }
-
-  &__td {
-    flex: 1;
-
-    @include responsive(tab) {
-      width: 100%;
-      margin-top: $spacing-1;
-    }
-  }
-
-  &__required {
-    color: #ff0000;
-  }
-
-  &__input,
-  &__textarea {
-    background-color: #f2f2f2;
-    display: block;
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-
-    &--small {
-      width: 50%;
-    }
-
-    &:active,
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &__input {
-    height: 45px;
-  }
-
-  &__textarea {
-    min-height: 170px;
-  }
-
-  &__submitWrapper {
-    display: flex;
-    justify-content: center;
-
-    &--layout {
-      margin-top: $spacing-6;
+    &:hover {
+      opacity: 0.5;
     }
   }
 
   &__submit {
-    width: 217px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mt_vw(32, 32);
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    & > input {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      @include px_vw(16, 16);
+      @include px_vw(8, 8);
+
+      color: $white;
+    }
   }
-
-  &__successMsg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: $spacing-2;
-    opacity: 0;
-  }
-}
-
-.wpcf7-spinner {
-  display: none !important;
-}
-
-.wpcf7-response-output {
-  text-align: center;
 }

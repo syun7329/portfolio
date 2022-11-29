@@ -1,38 +1,50 @@
 <?php
 
-class Archive {
-	private $post;
+class Archive
+{
+  private $post;
 
-	function __construct($post) {
-		$this->post = $post;
-	}
+  function __construct($post)
+  {
+    $this->post = $post;
+  }
 
-	public function render() {
+  public function render()
+  {
 
-		$title = get_the_title($this->post->ID);
-		$link = get_permalink($this->post->ID);
-		$thumbnail = get_the_post_thumbnail_url($this->post->ID);
-		$date = get_post_time('Y.m.d', false, $this->post->ID);
+    $title = get_the_title($this->post->ID);
+    $excerpt = get_the_excerpt($this->post->ID);
+    $link = get_permalink($this->post->ID);
 
-		$prefix = "
-			<a href=\"$link\" class=\"archiveItem\">
-				<div class=\"archiveItem__imgWrap\">
-					<img src=\"$thumbnail\" alt=\"\">
-				</div>
+    $prefix = "
 
-				<div class=\"archiveItem__infos\">
-					<p class=\"archiveItem__date\">$date</p>
+    <article class=\"archiveItem\">
+
+			<a href=\"$link\" class=\"archiveItem__link\">
+
+			<h3 class=\"archiveItem__title\">
+        $title
+      </h3>
+
+      <p class=\"archiveItem__detail\">
+        $excerpt
+      </p>
+
+      </div>
+
+    </article>
+
 		";
 
-		$suffix = "
-				</div>
+    // $suffix = "
+    // 		</div>
 
-				<p class=\"archiveItem__title\">$title</p>
-			</a>
-		";
+    // 		<p class=\"archiveItem__title\">$title</p>
+    // 	</a>
+    // ";
 
-		// <p class=\"archiveItem__category\">お知らせ</p>
+    // <p class=\"archiveItem__category\">お知らせ</p>
 
-		return $prefix . $suffix;
-	}
+    return $prefix;
+  }
 }

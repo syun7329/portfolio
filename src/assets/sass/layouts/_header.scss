@@ -15,6 +15,8 @@
 
   background: transparent;
 
+  // mix-blend-mode: difference;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -24,39 +26,57 @@
 
     width: 90%;
 
-    @include py_vw(24);
+    @include py_vw(24, 16);
+
+    @include responsive(tab) {
+      width: 80%;
+    }
   }
 
   &__contact {
+    @include px_vw(32);
+    @include py_vw(8);
+
+    @include fz_vw(12);
+
+    color: $black;
     border-radius: 100px;
     background: $white;
     border: 1px solid $black;
 
-    @include px_vw(32);
-    @include py_vw(8);
-
-    color: $black;
-
-    @include fz_vw(12);
+    @include responsive(tab) {
+      display: none;
+    }
   }
 
   &__logoArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
-    position: absolute;
+    // position: absolute;
 
-    // top: vw(24);
-    left: 0;
-    right: 0;
-
-    margin: auto;
+    // display: inline-block;
   }
 
   &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     object-fit: cover;
+
+    mix-blend-mode: difference;
+
+    z-index: 700;
+
     @include w_vw(50);
+
+    @include responsive(tab) {
+      position: static;
+    }
   }
 
   &__hamburger {

@@ -6,17 +6,4 @@
     width: 100%;
     justify-content: center;
   }
-
-  &--business,
-  &--clients {
-    position: sticky;
-    top: 25%;
-  }
-
-  &--business {
-    transform: translateX(-9vw);
-    @include responsive(tab) {
-      transform: none;
-    }
-  }
 }

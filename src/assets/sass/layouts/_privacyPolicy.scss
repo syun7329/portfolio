@@ -1,0 +1,37 @@
+@use "../global/" as *;
+
+.privacyPolicy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inner {
+    width: 80%;
+    @include pt_vw(104);
+  }
+
+  &__title {
+    @include fz_vw(24, 16);
+
+    line-height: 2;
+    font-weight: bold;
+    @include pt_vw(32, 24);
+  }
+
+  &__detail {
+    @include fz_vw(16);
+    line-height: 2;
+  }
+
+  &__list {
+    list-style-type: decimal;
+    @include pl_vw(16);
+  }
+
+  &__item {
+    @include pt_vw(16);
+
+    @include fz_vw(16);
+    line-height: 2;
+  }
+}

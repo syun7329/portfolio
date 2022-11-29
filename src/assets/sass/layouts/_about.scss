@@ -3,19 +3,24 @@
 .about {
   &__inner {
     display: flex;
+    align-items: center;
 
     @include responsive(tab) {
       flex-direction: column;
     }
   }
 
-  &__title {
+  &__svg {
     @include ml_vw(56, 0);
+    @include w_vw(411, 286);
+    overflow: visible;
   }
 
   &__detail {
-    @include pt_vw(24, 16);
-    margin-right: 20vw;
+    width: vw(616);
+    @include pt_vw(24);
+
+    font-family: $yuGothic;
 
     @include fz_vw(16);
     line-height: 2;
@@ -31,13 +36,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    overflow: hidden;
   }
 
   &__button {
     @include h_vw(62, 48);
-    @include mt_vw(0, 24);
+    @include mt_vw(72, 24);
 
     @include responsive(tab) {
       margin-left: 10vw;

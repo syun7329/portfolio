@@ -1,0 +1,15 @@
+@use "../global/" as *;
+
+.border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+  background: $black;
+}
+
+.js-AnimateBorder .animate {
+  animation: borderAnimatiton;
+}

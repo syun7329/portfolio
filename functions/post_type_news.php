@@ -4,22 +4,22 @@
 // カスタム投稿タイプの作成
 // =================================================
 
-add_action('init', 'create_post_type_news');
+add_action('init', 'create_post_type_column');
 
 /**
  * 
  * カスタム投稿タイプの作成 
  * 
  */
-function create_post_type_news()
+function create_post_type_column()
 {
 
   register_post_type(
-    'news',
+    'column',
     array(
       'labels' => array(
-        'name' => __('NEWS'),
-        'singular_name' => __('NEWS')
+        'name' => __('column'),
+        'singular_name' => __('column')
       ),
       'public' => true,
       'menu_position' => 5,

@@ -2,7 +2,7 @@
 
   <div class="footer__inner">
 
-    <div class="footer__contact contactUs">
+    <a href="<?php echo home_url('contact') ?>" class="footer__contact contactUs">
       <p class="contactUs__text">CONTACT US</p>
 
       <svg class="contactUs__arrow" xmlns="http://www.w3.org/2000/svg" width="38.414" height="32.828"
@@ -17,14 +17,15 @@
         </g>
       </svg>
 
-    </div>
+    </a>
+
 
     <div class="footer__main">
 
       <ul class="footer__nav footerNav">
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('home') ?>" class="footerNav__link">Home</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">Home</a>
         </li>
 
         <li class="footerNav__item">
@@ -40,11 +41,7 @@
         </li>
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">News</a>
-        </li>
-
-        <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">About</a>
+          <a href="<?php echo home_url('about-us') ?>" class="footerNav__link">About</a>
         </li>
 
         <li class="footerNav__item">
@@ -59,10 +56,6 @@
           <a href="<?php echo home_url('') ?>" class="footerNav__link">Privacy Policy</a>
         </li>
 
-        <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">Terms</a>
-        </li>
-
       </ul>
 
       <div class="footer__detail">
@@ -74,8 +67,9 @@
           </p>
 
           <p class="companyInfo__detail">
-            有限会社GC
-            〒<?php echo POST_CODE ?>&nbsp;&nbsp;<?php echo ADDRESS ?>
+            有限会社GC<br>
+            〒<?php echo POST_CODE ?><br>
+            <?php echo ADDRESS ?>
           </p>
 
         </div>

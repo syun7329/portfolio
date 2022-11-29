@@ -1,0 +1,15 @@
+@use "../global/" as *;
+
+.adoption {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__card {
+    box-sizing: border-box;
+    width: 50%;
+
+    @include responsive(tab) {
+      width: 100%;
+    }
+  }
+}

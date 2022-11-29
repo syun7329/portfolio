@@ -1,37 +1,56 @@
 @use "../global/" as *;
 
-@keyframes marquee {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
 .marquee {
-  &__text {
-    top: 0;
-    left: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    animation: marquee 30s linear infinite;
-    font-weight: bold;
+  --gap: 1rem;
 
-    & > span {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  &__text {
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+
+    & > div {
+      display: flex;
+      align-items: center;
+
       @include fz_vw(64, 32);
+      font-weight: bold;
     }
 
-    &--viewAllButton {
-      & > span {
-        @include fz_vw(32, 16);
+    &--duration01 {
+      animation: scroll 20s linear infinite;
+
+      @include responsive(tab) {
+        animation: scroll 20s linear infinite;
       }
     }
 
-    &--2 {
-      animation-delay: 15s;
+    &--viewAllButton {
+      gap: 2rem;
+      animation: scroll 2.5s linear infinite;
+
+      @include responsive(tab) {
+        animation: scroll 30s linear infinite;
+      }
+
+      & > div {
+        @include fz_vw(32, 16);
+      }
     }
   }
 }

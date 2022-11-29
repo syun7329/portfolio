@@ -1,0 +1,42 @@
+@use "../global/" as *;
+
+.archiveList {
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  grid-template-rows: repeat(4, vw(247));
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  position: relative;
+
+  border-left: 1px solid $black;
+  border-right: 1px solid $black;
+
+  &__item {
+    &:nth-child(3n + 2) {
+      border-left: 1px solid $black;
+      border-right: 1px solid $black;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3) {
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+
+        width: 98%;
+        height: 1px;
+
+        background: $black;
+      }
+    }
+  }
+}

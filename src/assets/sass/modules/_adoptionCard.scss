@@ -1,0 +1,52 @@
+@use "../global/" as *;
+
+.adoptionCard {
+  border-left: solid 0.5px $gray;
+  border-right: solid 0.5px $gray;
+  border-bottom: solid 1px $gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include responsive(tab) {
+    border-left: none;
+    border-right: none;
+  }
+
+  &__inner {
+    width: 80%;
+    @include px_vw(48, 0);
+    @include py_vw(48);
+  }
+
+  &__img {
+    width: 100%;
+    @include aspectRatio(300, 530);
+
+    @include responsive(tab) {
+      @include aspectRatio(200, 305);
+    }
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include pt_vw(32);
+    @include fz_vw(24);
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &__detail {
+    @include pt_vw(16);
+    @include fz_vw(16);
+    line-height: 2;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

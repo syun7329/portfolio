@@ -1,0 +1,38 @@
+@use "../global/" as *;
+
+.borderItem {
+  position: relative;
+
+  &--history {
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+    }
+
+    &::after {
+      bottom: 0;
+
+      border-radius: 100px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include pt_vw(48);
+    @include pb_vw(16);
+
+    & > * {
+      @include fz_vw(16);
+      font-family: $ryumin;
+    }
+  }
+}

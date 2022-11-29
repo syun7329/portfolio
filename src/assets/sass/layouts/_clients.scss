@@ -15,7 +15,9 @@
       flex-direction: column;
     }
   }
-  &__title {
+
+  &__svg {
+    @include w_vw(340, 258);
   }
 
   &__list {

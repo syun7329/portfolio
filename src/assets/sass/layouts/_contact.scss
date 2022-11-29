@@ -1,0 +1,38 @@
+@use "../global/" as *;
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    width: 100%;
+  }
+
+  &__form {
+    flex: 1;
+  }
+
+  .wpcf7-response-output {
+    width: 80%;
+    color: $white;
+    text-align: center;
+    line-height: 2;
+
+    margin: {
+      left: auto !important;
+      right: auto !important;
+    }
+
+    padding: {
+      top: vw(16) !important;
+      bottom: vw(16) !important;
+    }
+  }
+
+  .wpcf7-submit {
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

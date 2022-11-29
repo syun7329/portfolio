@@ -13,10 +13,9 @@
     @include pr_vw(136, 0);
 
     @include responsive(tab) {
-      width: 100%;
-
       display: flex;
       justify-content: space-between;
+      width: 100%;
     }
 
     &::after {
@@ -37,48 +36,9 @@
     }
 
     &:hover {
-      .businessList__text--en {
-        animation: hoverSlideAnimation 0.5s ease-in forwards;
-      }
-    }
-  }
-
-  &__link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    color: $black;
-
-    @include responsive(tab) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  &__text {
-    font-weight: bold;
-    // transition: $transition;
-
-    &--en {
-      @include fz_vw(80, 32);
-    }
-
-    &--ja {
-      @include fz_vw(16, 12);
-      @include pt_vw(0, 8);
-      font-weight: normal;
-    }
-  }
-
-  &__arrow {
-    display: none;
-
-    @include w_vw(43);
-    @include h_vw(43);
-
-    @include responsive(tab) {
-      display: block;
+      // .businessList__text--en {
+      //   animation: hoverSlideAnimation 0.5s ease-in forwards;
+      // }
     }
   }
 }

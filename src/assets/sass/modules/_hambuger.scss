@@ -5,10 +5,18 @@
   border: none;
   background-color: transparent;
 
+  &.active {
+    .hamburger__bar {
+      background-color: $black !important;
+    }
+  }
+
   &__bar {
     position: absolute;
     top: 50%;
     left: 50%;
+
+    z-index: $layer3;
 
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);

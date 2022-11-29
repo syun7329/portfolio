@@ -1,0 +1,45 @@
+@use "../global/" as *;
+
+.pageHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include responsive(tab) {
+    flex-direction: column-reverse;
+  }
+
+  background: $black;
+
+  & > * {
+    color: $white;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 80%;
+
+    @include pt_vw(160, 120);
+    @include pb_vw(40, 64);
+
+    @include responsive(tab) {
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__title {
+    @include fz_vw(120, 56);
+  }
+
+  &__subTitle {
+    @include fz_vw(24, 16);
+    // font-weight: regular;
+    font-family: $ryumin;
+    font-weight: 300;
+    line-height: 2;
+  }
+}

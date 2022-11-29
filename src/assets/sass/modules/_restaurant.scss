@@ -1,0 +1,104 @@
+@use "../global/" as *;
+
+.restaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include pt_vw(80);
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 80%;
+  }
+
+  &__main {
+    display: flex;
+
+    @include responsive(tab) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__name {
+    @include pt_vw(0, 32);
+    @include fz_vw(40);
+    font-weight: bold;
+  }
+
+  &__detail {
+    @include pt_vw(40, 24);
+    @include fz_vw(16);
+    line-height: 2;
+  }
+
+  &__logo {
+    position: relative;
+
+    flex-shrink: 0;
+    @include w_vw(472);
+
+    @include responsive(tab) {
+      width: 100%;
+
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+
+      @include aspectRatio(1, 1);
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+  }
+
+  &__button {
+    display: block;
+
+    width: 100%;
+    @include h_vw(62, 48);
+
+    @include mt_vw(56, 32);
+
+    @include responsive(tab) {
+      width: 80%;
+    }
+
+    & > .marquee {
+      height: 100%;
+
+      & > .marquee__text {
+        top: 25%;
+
+        @include responsive(tab) {
+          top: 36%;
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include mt_vw(80, 32);
+    position: relative;
+
+    & > img {
+      height: 100%;
+    }
+
+    @include responsive(tab) {
+      width: 100%;
+      height: vw(237, tab);
+      object-fit: cover;
+    }
+  }
+}

@@ -11,6 +11,7 @@
     justify-content: space-between;
 
     @include responsive(tab) {
+      width: 100%;
       flex-direction: column-reverse;
     }
   }
@@ -19,6 +20,18 @@
     @include mt_vw(0, 56);
   }
 
+  &__svg {
+    @include w_vw(272, 207);
+    transform: translateX(-9vw);
+
+    @include responsive(tab) {
+      transform: none;
+    }
+  }
+
   &__title {
+  }
+
+  &__sticky {
   }
 }

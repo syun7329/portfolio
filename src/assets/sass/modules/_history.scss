@@ -1,0 +1,51 @@
+@use "../global/" as *;
+
+.history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inner {
+    width: 80%;
+    display: flex;
+
+    @include pt_vw(80);
+
+    @include responsive(tab) {
+      flex-direction: column;
+    }
+  }
+
+  &__svg {
+    @include w_vw(348);
+    margin-right: vw(104);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(tab) {
+      width: 100%;
+
+      margin-right: 0;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    @include mt_vw(0, 32);
+
+    & > * + * {
+      @include pt_vw(24);
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+}
