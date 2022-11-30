@@ -1,10 +1,10 @@
 <?php
 
 global $wp_rewrite;
-
 $wp_rewrite->flush_rules();
 
-require_once(__DIR__ . '/functions/post_type_news.php');
+require_once(__DIR__ . '/functions/post_type_column.php');
+require_once(__DIR__ . '/functions/post_type_business.php');
 
 require_once(__DIR__ . '/includes/services/PostService.php');
 require_once(__DIR__ . '/includes/services/TagService.php');
@@ -13,6 +13,11 @@ require_once(__DIR__ . '/includes/components/Post.php');
 require_once(__DIR__ . '/includes/components/Pagination.php');
 require_once(__DIR__ . '/includes/components/Archive.php');
 
+// グローバル変数
+global $TMP_DIR;
+global $IMG_DIR;
+$TMP_DIR = get_template_directory_uri();
+$IMG_DIR = $TMP_DIR . "/dist/assets/images/";
 
 // ===============================================================================
 // 変数・定数
@@ -48,25 +53,16 @@ const ADDRESS        =  "東京都港区赤坂7-6-15-505";
 
 add_theme_support('post-thumbnails');
 
-// the_titleをエスケープ
-add_filter('the_title', function ($title, $id) {
-  return esc_html($title);
-}, 10, 2);
-
 function unset_default_post()
 {
-
   global $menu;
-  unset($menu[5]); //投稿メニュー
-
+  unset($menu[5]);
 }
-
 add_action("admin_menu", "unset_default_post");
 
 /* 投稿アーカイブページの作成 */
 function post_has_archive($args, $post_type)
 {
-
   if ('post' == $post_type) {
     $args['rewrite'] = true;
     $args['has_archive'] = 'archives'; //任意のスラッグ名
@@ -75,6 +71,7 @@ function post_has_archive($args, $post_type)
 }
 
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
 
 function get_posts_by_tag()
 {

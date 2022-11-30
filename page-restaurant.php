@@ -4,6 +4,15 @@ Template Name: restaurant
 */
 ?>
 
+<?php
+
+$postService = new PostService();
+$tagService = new TagService();
+
+$postsResult = $postService->renderPostsByCategory("business", "-1", "restaurant");
+
+?>
+
 <?php get_header(); ?>
 
 <main class="main">
@@ -34,7 +43,7 @@ Template Name: restaurant
             </h2>
 
             <p class="restaurant__detail">
-              ダミーテキスト が入ります。自分には、人間の生活というものが、見当つかないのです。自分は東北の田舎に生れましたので、汽車をはじめて見たのは、よほど大きくなってからでした。自分
+              卓上レモンサワーサーバーと新鮮な生ホルモン、多様なサイドメニューを用意した飲み放題、食べ放題どちらも楽しめるお店。「ネオ×大衆」をコンセプトとしたブランドで、店内も「新しいのにどこか懐かしい」雰囲気。利用しやすい価格設定で幅広い年齢層から注目を受ける。2022年6月現在、全国に20店舗以上展開中。(FC店舗含む)
             </p>
 
           </div>
@@ -47,50 +56,6 @@ Template Name: restaurant
 
         </div>
 
-        <a href="" class="restaurant__button viewAllButton underTabNone">
-
-          <div class="marquee">
-
-            <div class="marquee__text marquee__text--viewAllButton">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
-              <div class="">VIEW ALL</div>
-            </div>
-
-          </div>
-
-        </a>
-
       </div>
 
       <picture class="restaurant__img">
@@ -98,25 +63,6 @@ Template Name: restaurant
           type="image/webp" />
         <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/top-img.jpg" />
       </picture>
-
-      <a href="" class="restaurant__button viewAllButton underTabVisible">
-
-        <div class="marquee">
-          <div class="marquee__text marquee__text--viewAllButton">
-            <?php for ($i = 0; $i < 50; $i++) : ?>
-            <div>VIEW ALL</div>
-            <?php endfor; ?>
-          </div>
-
-          <div class="marquee__text marquee__text--viewAllButton marquee__text--2">
-            <?php for ($i = 0; $i < 50; $i++) : ?>
-            <div>VIEW ALL</div>
-            <?php endfor; ?>
-          </div>
-
-        </div>
-
-      </a>
 
     </div>
 

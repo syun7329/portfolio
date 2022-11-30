@@ -1,28 +1,32 @@
-// stickyさせたい要素
-const stickyElems = [".js-business__sticky", ".js-clients__sticky"];
-const arr = [];
+// // stickyさせたい要素
+// const stickyElems = [".js-business__sticky"];
 
-if (stickyElems) {
-  stickyElems.map((e) => {
-    arr.push(
-      new Sticksy(e, {
-        topSpacing: calcMiddlePosition(e),
-      })
-    );
-  });
-}
+// const arr = [];
 
-arr.map((e) => {
-  e.onStateChanged = function (state) {
-    if (state === "fixed") e.nodeRef.classList.add("widget--fixed");
-    else e.nodeRef.classList.remove("widget--fixed");
-  };
-});
+// stickyElems.map((e) => {
+//   arr.push(
+//     new Sticksy(e, {
+//       topSpacing: calcMiddlePosition(e),
+//     })
+//   );
+// });
 
-// オブジェクトが上下中央に配置されるtopの位置を取得
-function calcMiddlePosition(e) {
-  let elemHeight = document.querySelector(e).clientHeight;
-  let windowHalfYoffset = (window.innerHeight - elemHeight) / 2;
+// arr.map((e) => {
+//   e.onStateChanged = function (state) {
+//     if (state === "fixed") e.nodeRef.classList.add("widget--fixed");
+//     else e.nodeRef.classList.remove("widget--fixed");
+//   };
+// });
 
-  return windowHalfYoffset;
-}
+// // オブジェクトが上下中央に配置されるtopの位置を取得
+// function calcMiddlePosition(selector) {
+//   const elem = document.querySelector(selector);
+//   let windowHalfYoffset = 0;
+
+//   if (elem) {
+//     const elemHeight = elem.clientHeight;
+//     windowHalfYoffset = (window.innerHeight - elemHeight) / 2;
+//   }
+
+//   return windowHalfYoffset;
+// }

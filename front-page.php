@@ -190,7 +190,7 @@ $media = $postService->renderMedia('media', -1);
 
             <div class="businessItem__inner">
 
-              <a class="businessItemlink">
+              <a class="businessItem__link" href="<?php echo home_url("restaurant") ?>">
                 <p class="businessItem__text businessItem__text--en">Restaurant</p>
                 <p class="businessItem__text businessItem__text--ja">飲食事業</p>
               </a>
@@ -206,7 +206,7 @@ $media = $postService->renderMedia('media', -1);
 
             <div class="businessItem__inner">
 
-              <a class="businessItemlink">
+              <a class="businessItem__link" href="<?php echo home_url("mail-order") ?>">
                 <p class="businessItem__text businessItem__text--en">Mail order</p>
                 <p class="businessItem__text businessItem__text--ja">通販事業</p>
               </a>
@@ -221,7 +221,7 @@ $media = $postService->renderMedia('media', -1);
           <li class="businessList__item businessItem">
 
             <div class="businessItem__inner">
-              <a class="businessItemlink">
+              <a class="businessItem__link" href="<?php echo home_url("real-estate") ?>">
                 <p class="businessItem__text businessItem__text--en">Real estate</p>
                 <p class="businessItem__text businessItem__text--ja">不動産事業</p>
               </a>
@@ -236,7 +236,7 @@ $media = $postService->renderMedia('media', -1);
 
             <div class="businessItem__inner">
 
-              <a class="businessItemlink">
+              <a class="businessItem__link" href="<?php echo home_url("event") ?>">
                 <p class="businessItem__text businessItem__text--en">Event</p>
                 <p class="businessItem__text businessItem__text--ja">イベント事業</p>
               </a>
@@ -360,7 +360,7 @@ $media = $postService->renderMedia('media', -1);
 
       <div class="column__inner">
 
-        <dvi class="column__list columnList">
+        <div class="column__list columnList">
 
           <articel class="columnList__item">
             <a href="" class="columnList__link">
@@ -475,7 +475,52 @@ $media = $postService->renderMedia('media', -1);
             </a>
           </articel>
 
-        </dvi>
+        </div>
+
+        <a href="<?php echo home_url("column") ?>" class="about__button viewAllButton">
+
+          <div class="marquee">
+
+            <div class="marquee__text marquee__text--viewAllButton">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+            <div class="marquee__text marquee__text--viewAllButton" aria-hidden="true">
+              <div class="">VIEW ALL</div>
+            </div>
+
+          </div>
+
+        </a>
+
 
       </div>
 
