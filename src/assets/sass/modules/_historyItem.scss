@@ -46,4 +46,13 @@
     position: relative;
     @include pl_vw(16);
   }
+
+  &__time {
+    line-height: 2;
+  }
+
+  &__detail {
+    width: 80%;
+    line-height: 2;
+  }
 }

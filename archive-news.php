@@ -9,7 +9,7 @@
 
 $postService = new PostService();
 $current_page = get_query_var('paged');
-$result = $postService->getPostArchives($current_page, 'news');
+$result = $postService->getPostArchives($current_page, 'column');
 
 $categories = get_categories();
 
@@ -26,9 +26,19 @@ $categories = get_categories();
         <h1 class="pageHeader__title">
           Column
         </h1>
-        <h2 class="pageHeader__subTitle">
-          記事一覧
-        </h2>
+
+        <p class="pageHeader__subTitle">
+          articls is
+        </p>
+
+        <select class=".js-select">
+          <?php foreach ($categories as $category) : ?>
+          <option class="" value=" <?php echo get_category_link($category->term_id) ?>">
+            <?php echo $category->name ?>
+          </option>
+          <?php endforeach; ?>
+        </select>
+
       </div>
     </div>
 
@@ -36,36 +46,28 @@ $categories = get_categories();
 
       <div class="archive__inner">
 
-        <ul class="categoryList categoryList--layout">
-          <?php foreach ($categories as $category) : ?>
-            <li class="categoryListItem">
-              <a href="<?php echo get_category_link($category->term_id) ?>" class="categoryListItem__link"><?php echo $category->name ?></a>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-
         <div class="archive__list archiveList">
 
           <!-- <?php echo $result['render'] ?> -->
 
           <?php $i = 0; ?>
           <?php while ($i < 12) { ?>
-            <article class="archiveList__item archiveItem">
+          <article class="archiveList__item archiveItem">
 
-              <a href="$link" class="archiveItem__link">
+            <a href="$link" class="archiveItem__link">
 
-                <h3 class="archiveItem__title">
-                  $title
-                </h3>
+              <h3 class="archiveItem__title">
+                $title
+              </h3>
 
-                <p class="archiveItem__detail">
-                  $excerpt
-                </p>
-              </a>
+              <p class="archiveItem__detail">
+                $excerpt
+              </p>
+            </a>
 
-            </article>
+          </article>
 
-            <?php $i++; ?>
+          <?php $i++; ?>
 
           <?php }; ?>
 
