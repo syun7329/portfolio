@@ -9,7 +9,7 @@
 
 $postService = new PostService();
 $current_page = get_query_var('paged');
-$result = $postService->getPostArchives($current_page, 'column');
+$result = $postService->getPostsByPostType(PostTypeConst::COLUMN, PostTypeConst::COLUMN, 9, $current_page);
 
 $categories = get_categories();
 
@@ -48,7 +48,7 @@ $categories = get_categories();
 
         <div class="archive__list archiveList">
 
-          <!-- <?php echo $result['render'] ?> -->
+          <?php echo $result['html'] ?>
 
           <?php $i = 0; ?>
           <?php while ($i < 12) { ?>

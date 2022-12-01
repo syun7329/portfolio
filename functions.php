@@ -3,21 +3,34 @@
 global $wp_rewrite;
 $wp_rewrite->flush_rules();
 
+global $TMP_DIR;
+global $IMG_DIR;
+
+$TMP_DIR = get_template_directory_uri();
+$IMG_DIR = $TMP_DIR . "/dist/assets/images/";
+
 require_once(__DIR__ . '/functions/post_type_column.php');
 require_once(__DIR__ . '/functions/post_type_business.php');
 
-require_once(__DIR__ . '/includes/services/PostService.php');
-require_once(__DIR__ . '/includes/services/TagService.php');
-
-require_once(__DIR__ . '/includes/components/Post.php');
 require_once(__DIR__ . '/includes/components/Pagination.php');
-require_once(__DIR__ . '/includes/components/Archive.php');
 
-// グローバル変数
-global $TMP_DIR;
-global $IMG_DIR;
-$TMP_DIR = get_template_directory_uri();
-$IMG_DIR = $TMP_DIR . "/dist/assets/images/";
+require_once(__DIR__ . '/includes/constants/LayoutTypeConst.php');
+require_once(__DIR__ . '/includes/constants/PostTypeConst.php');
+require_once(__DIR__ . '/includes/constants/TaxonomySlugConst.php');
+
+require_once(__DIR__ . '/includes/factories/LayoutFactory.php');
+
+require_once(__DIR__ . '/includes/layouts/AbstractLayout.php');
+require_once(__DIR__ . '/includes/layouts/Business.php');
+require_once(__DIR__ . '/includes/layouts/Column.php');
+
+require_once(__DIR__ . '/includes/services/PostService.php');
+require_once(__DIR__ . '/includes/services/TaxonomyService.php');
+
+require_once(__DIR__ . '/includes/utils/PostUtils.php');
+require_once(__DIR__ . '/includes/utils/ImageUtils.php');
+
+
 
 // ===============================================================================
 // 変数・定数
@@ -58,43 +71,5 @@ function unset_default_post()
   global $menu;
   unset($menu[5]);
 }
+
 add_action("admin_menu", "unset_default_post");
-
-/* 投稿アーカイブページの作成 */
-function post_has_archive($args, $post_type)
-{
-  if ('post' == $post_type) {
-    $args['rewrite'] = true;
-    $args['has_archive'] = 'archives'; //任意のスラッグ名
-  }
-  return $args;
-}
-
-add_filter('register_post_type_args', 'post_has_archive', 10, 2);
-
-
-function get_posts_by_tag()
-{
-  $nonce = $_REQUEST['nonce'];
-  $taxonomy = $_REQUEST['taxonomy'];
-  $terms = $_REQUEST['terms'];
-  $posts_per_page = $_REQUEST['posts_per_page'];
-
-  if (!wp_verify_nonce($nonce, 'get_posts_by_tag')) {
-    header('HTTP/1.0 500 Bad error');
-    die();
-  }
-
-  $postService = new PostService();
-  $posts = $postService->renderPostsByTag($posts_per_page, $taxonomy, $terms);
-
-  echo json_encode(array(
-    'posts' => $posts,
-    // 'current_page' => $paged,
-  ));
-
-  exit;
-}
-
-add_action('wp_ajax_get_posts_by_tag', 'get_posts_by_tag');
-add_action('wp_ajax_nopriv_get_posts_by_tag', 'get_posts_by_tag');

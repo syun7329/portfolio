@@ -22,7 +22,7 @@ function create_post_type_business()
         'singular_name' => __('business')
       ),
       'public' => true,
-      'menu_position' => 10,
+      'menu_position' => 5,
       'show_in_rest' => true,
       'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments'),
     )

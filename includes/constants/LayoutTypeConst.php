@@ -1,6 +1,6 @@
 <?php
 
-class PostTypeConst
+class LayoutTypeConst
 {
   const BUSINESS = 'business';
   const COLUMN = 'column';

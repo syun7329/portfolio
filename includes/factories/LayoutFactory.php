@@ -3,12 +3,21 @@
 class LayoutFactory
 {
 
-  public static function create($type, $post)
+  public static function create($layout_type, $post)
   {
-    if ($type == LayoutTypeConst::INTERVIEW_CARD) {
-      return new Interview($post);
-    } else if ($type == LayoutTypeConst::POST) {
-      return new Post($post);
+
+    switch ($layout_type) {
+      case LayoutTypeConst::BUSINESS:
+        return new Business($post);
+        break;
+
+      case LayoutTypeConst::COLUMN:
+        return new Column($post);
+        break;
+
+      default:
+        return false;
+        break;
     }
   }
 }
