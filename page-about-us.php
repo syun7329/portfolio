@@ -12,10 +12,10 @@ Template Name: about-us
 
     <div class="pageHeader">
       <div class="pageHeader__inner">
-        <h1 class="pageHeader__title">
-          About us
+        <h1 class="pageHeader__title js-textAnimation">
+          About&nbsp;Us
         </h1>
-        <h2 class="pageHeader__subTitle">
+        <h2 class="pageHeader__subTitle js-textAnimation">
           私たちについて
         </h2>
       </div>
@@ -26,7 +26,7 @@ Template Name: about-us
 
       <div class="history__inner">
 
-        <div class="history__sticky js-history__sticky">
+        <div class="history__sticky js-history__sticky js-sticky">
           <svg class="history__svg js-history__svg" xmlns="http://www.w3.org/2000/svg" width="348.691" height="381.282"
             viewBox="0 0 348.691 381.282">
             <g id="グループ_2668" data-name="グループ 2668" transform="translate(-155.995 -451.366)">
@@ -42,7 +42,8 @@ Template Name: about-us
 
         <ul class="history__list">
 
-          <li class="history__item historyItem">
+          <li class="history__item historyItem js-borderAnimation">
+            <div class="historyItem__circle"></div>
             <div class="historyItem__inner">
               <div class="historyItem__time">1976</div>
               <div class="historyItem__detail">
@@ -52,10 +53,10 @@ Template Name: about-us
                 多岐にわたる事業を展開<br>
               </div>
             </div>
-            <div class="border js-animateBorder"></div>
           </li>
 
-          <li class="history__item historyItem">
+          <li class="history__item historyItem js-borderAnimation">
+            <div class="historyItem__circle"></div>
             <div class="historyItem__inner">
               <div class="historyItem__time">1992</div>
               <div class="historyItem__detail">
@@ -63,10 +64,10 @@ Template Name: about-us
                 有限会社銀河コーポレーション起業<br>
               </div>
             </div>
-            <div class="border js-animateBorder"></div>
           </li>
 
-          <li class="history__item historyItem">
+          <li class="history__item historyItem js-borderAnimation">
+            <div class="historyItem__circle"></div>
             <div class="historyItem__inner">
               <div class="historyItem__time">2015</div>
               <div class="historyItem__detail">
@@ -77,10 +78,10 @@ Template Name: about-us
                 ここから早急な会社再建が始まる<br>
               </div>
             </div>
-            <div class="border js-animateBorder"></div>
           </li>
 
-          <li class="history__item historyItem">
+          <li class="history__item historyItem js-borderAnimation">
+            <div class="historyItem__circle"></div>
             <div class="historyItem__inner">
               <div class="historyItem__time">2017</div>
               <div class="historyItem__detail">
@@ -90,10 +91,10 @@ Template Name: about-us
                 フードフェスなども多数出店<br>
               </div>
             </div>
-            <div class="border js-animateBorder"></div>
           </li>
 
-          <li class="history__item historyItem">
+          <li class="history__item historyItem js-borderAnimation">
+            <div class="historyItem__circle"></div>
             <div class="historyItem__inner">
               <div class="historyItem__time">2018</div>
               <div class="historyItem__detail">
@@ -102,10 +103,10 @@ Template Name: about-us
                 資本金1,000万円から5,000万円へ増資<br>
               </div>
             </div>
-            <div class="border js-animateBorder"></div>
           </li>
 
-          <li class="history__item historyItem">
+          <li class="history__item historyItem js-borderAnimation">
+            <div class="historyItem__circle"></div>
             <div class="historyItem__inner">
               <div class="historyItem__time">2019</div>
               <div class="historyItem__detail">
@@ -116,10 +117,10 @@ Template Name: about-us
                 飲食店開業サポート事業開始<br>
               </div>
             </div>
-            <div class="border js-animateBorder"></div>
           </li>
 
-          <li class="history__item historyItem">
+          <li class="history__item historyItem js-borderAnimation">
+            <div class="historyItem__circle"></div>
             <div class="historyItem__inner">
               <div class="historyItem__time">2020〜</div>
               <div class="historyItem__detail">
@@ -138,7 +139,6 @@ Template Name: about-us
                 事業拡大中<br>
               </div>
             </div>
-            <div class="border js-animateBorder"></div>
           </li>
 
         </ul>
@@ -164,62 +164,61 @@ Template Name: about-us
           </g>
         </svg>
 
-        <h2 class="company__title">
+        <h2 class="company__title js-borderAnimation">
           <p class="company__titleText company__titleText--en">COMPANY PROFILE</p>
           <p class="company__titleText company__titleText--ja">会社概要</p>
-          <div class="border js-border"></div>
         </h2>
 
         <section class="company__section">
 
           <ul class="company__list">
 
-            <li class="borderItem">
+            <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title">社名</p>
                 <p class="borderItem__content">有限会社GC</p>
               </div>
-              <div class="border js-animateBorder"></div>
+
             </li>
 
-            <li class="borderItem">
+            <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title">代表者名</p>
                 <p class="borderItem__content">石原義明</p>
               </div>
-              <div class="border js-animateBorder"></div>
+
             </li>
 
-            <li class="borderItem">
+            <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title">資本金</p>
                 <p class="borderItem__content">1億円</p>
               </div>
-              <div class="border js-animateBorder"></div>
+
             </li>
 
-            <li class="borderItem">
+            <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title">設立</p>
                 <p class="borderItem__content">1992年07月</p>
               </div>
-              <div class="border js-animateBorder"></div>
+
             </li>
 
-            <li class="borderItem">
+            <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title">本社所在地</p>
                 <p class="borderItem__content">東京都港区赤坂7-6-15-505</p>
               </div>
-              <div class="border js-animateBorder"></div>
+
             </li>
 
-            <li class="borderItem">
+            <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title">業種</p>
                 <p class="borderItem__content">サービス業</p>
               </div>
-              <div class="border js-animateBorder"></div>
+
             </li>
 
           </ul>

@@ -2,8 +2,9 @@
 
   <div class="footer__inner">
 
-    <a href="<?php echo home_url('contact') ?>" class="footer__contact contactUs">
-      <p class="contactUs__text">CONTACT US</p>
+    <a href="<?php echo home_url('contact') ?>" class="footer__contact contactUs js-borderAnimation">
+
+      <p class="contactUs__text js-textAnimation">CONTACT&nbsp;US</p>
 
       <svg class="contactUs__arrow" xmlns="http://www.w3.org/2000/svg" width="38.414" height="32.828"
         viewBox="0 0 38.414 32.828">

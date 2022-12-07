@@ -36,15 +36,6 @@ class Archive
 
 		";
 
-    // $suffix = "
-    // 		</div>
-
-    // 		<p class=\"archiveItem__title\">$title</p>
-    // 	</a>
-    // ";
-
-    // <p class=\"archiveItem__category\">お知らせ</p>
-
     return $prefix;
   }
 }

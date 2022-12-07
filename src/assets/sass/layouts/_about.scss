@@ -39,40 +39,13 @@
   }
 
   &__button {
+    width: 100vw;
+
     @include h_vw(62, 48);
     @include mt_vw(72, 24);
 
     @include responsive(tab) {
       margin-left: 10vw;
     }
-
-    & > .marquee {
-      height: 100%;
-
-      & > .marquee__text {
-        top: 25%;
-
-        @include responsive(tab) {
-          top: 36%;
-        }
-      }
-    }
-  }
-}
-
-
-.test {
-  transform: matrix(0.407, 0.914, -0.914, 0.407, 1860.03, -1456.55);
-  animation: test 1s forwards;
-  animation-delay: 3s;
-}
-
-@keyframes test {
-  0% {
-    transform: matrix(0.407, 0.914, -0.914, 0.407, 1860.03, -1456.55);
-  }
-
-  100% {
-    transform: matrix(0.407, 0.914, -0.914, 0.407, 1934.03, -1277.55);
   }
 }

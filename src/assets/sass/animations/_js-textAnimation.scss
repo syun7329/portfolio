@@ -1,0 +1,9 @@
+.js-textAnimation {
+  display: flex;
+  overflow: hidden;
+
+  & > span {
+    display: block;
+    font-size: inherit;
+  }
+}

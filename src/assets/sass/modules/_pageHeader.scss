@@ -33,13 +33,23 @@
 
   &__title {
     @include fz_vw(120, 56);
+
+    & > span {
+      font-size: inherit;
+    }
   }
 
   &__subTitle {
     @include fz_vw(24, 16);
-    // font-weight: regular;
     font-family: $ryumin;
     font-weight: 300;
     line-height: 2;
+
+    & > span {
+      font-size: inherit;
+    }
+  }
+
+  &__select {
   }
 }

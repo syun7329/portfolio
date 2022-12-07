@@ -4,16 +4,18 @@ class Business extends AbstractLayout
 {
   public function render()
   {
-
     $title = get_the_title($this->post->ID);
     $content = $this->post->post_content;
     $src = ImageUtils::getThumbnailUrl($this->post->ID);
-    $date = get_the_date("Y.m.d", $this->post);
-    $link = get_permalink($this->post->ID);
 
+    $link = get_field("business_link", $this->post->ID);
+    $img_link = get_field("business_image", $this->post->ID);
+
+    $buttonHtml = $this->generateViewAllButtonHtml($link);
+    $bottomImageHtml = $this->generateBottomImageHtml($img_link);
 
     return "
-    <div class=\"restaurant\">
+    <article class=\"restaurant\">
 
       <div class=\"restaurant__inner\">
 
@@ -37,13 +39,62 @@ class Business extends AbstractLayout
 
         </div>
 
+        {$buttonHtml}
+
       </div>
 
-      <div class=\"restaurant__imgWrapper\">
-        <img src=\"\" alt=\"\" class=\"restaurant__img\">
-      </div>
+      {$bottomImageHtml}
 
-    </div>
+    </article>
+
     ";
+  }
+
+
+  public function generateViewAllButtonHtml($link)
+  {
+
+    $html = "";
+    $viewAllTextHtml = "";
+
+    if ($link) {
+
+      for ($i = 0; $i < 100; $i++) {
+        $viewAllTextHtml .=
+          "
+            <p class=\"viewAllButton__text\">
+              VIEW MORE
+            </p>
+          ";
+      }
+
+      $html = "
+        <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"{$link}\" class=\"restaurant__button viewAllButton\">
+          <div class=\"viewAllButton__inner\">
+            {$viewAllTextHtml}
+          </div>
+        </a>
+      ";
+    }
+
+    return $html;
+  }
+
+
+  public function generateBottomImageHtml($img_link)
+  {
+
+    $html = "";
+
+    if ($img_link) {
+
+      $html = "   
+        <div class=\"restaurant__BottomImgWrapper\">
+          <img src=\"{$img_link}\" alt=\"\" class=\"restaurant__img\">
+        </div>
+      ";
+    }
+
+    return $html;
   }
 }

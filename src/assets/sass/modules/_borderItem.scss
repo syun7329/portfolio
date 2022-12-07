@@ -3,24 +3,19 @@
 .borderItem {
   position: relative;
 
-  &--history {
-    &:first-child {
-      &::before {
-        display: none;
-      }
-    }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: $black;
+  }
 
+  &.animate {
     &::before {
-      top: 0;
-      left: 0;
-      width: 1px;
-      height: 100%;
-    }
-
-    &::after {
-      bottom: 0;
-
-      border-radius: 100px;
+      animation: borderAnimationLeftToRight 1s ease-in-out forwards;
     }
   }
 

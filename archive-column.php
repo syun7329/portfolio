@@ -9,7 +9,7 @@
 
 $postService = new PostService();
 $current_page = get_query_var('paged');
-$result = $postService->getPostsByPostType(PostTypeConst::COLUMN, PostTypeConst::COLUMN, 9, $current_page);
+$result = $postService->getPostsByPostType(LayoutTypeConst::COLUMN_ARCHIVE, PostTypeConst::COLUMN, 12, $current_page);
 
 $categories = get_categories();
 
@@ -46,31 +46,14 @@ $categories = get_categories();
 
       <div class="archive__inner">
 
-        <div class="archive__list archiveList">
+        <div class="archive__list columnList columnList--archive">
 
           <?php echo $result['html'] ?>
 
-          <?php $i = 0; ?>
-          <?php while ($i < 12) { ?>
-          <article class="archiveList__item archiveItem">
-
-            <a href="$link" class="archiveItem__link">
-
-              <h3 class="archiveItem__title">
-                $title
-              </h3>
-
-              <p class="archiveItem__detail">
-                $excerpt
-              </p>
-            </a>
-
-          </article>
-
-          <?php $i++; ?>
-
-          <?php }; ?>
-
+          <div class="columnItem__border columnItem__border--01 js-borderAnimation"></div>
+          <div class="columnItem__border columnItem__border--02a js-borderAnimation"></div>
+          <div class="columnItem__border columnItem__border--03a js-borderAnimation"></div>
+          <div class="columnItem__border columnItem__border--04 js-borderAnimation"></div>
 
         </div>
 

@@ -1,6 +1,6 @@
 @use "../global/" as *;
 
-.viewAllButton {
+.topMarquee {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,17 +9,9 @@
 
   overflow: hidden;
 
-  border-radius: 100px;
   color: $black;
-  background: $white;
-  border: solid 2px $black;
 
   transition: $transition;
-
-  &:hover {
-    color: $white;
-    background: $black;
-  }
 
   &__inner {
     display: flex;
@@ -28,12 +20,12 @@
 
     gap: vw(24);
 
-    animation: marqueeViewAll 400s linear infinite;
+    animation: marqueeViewAll 800s linear infinite;
   }
 
   &__text {
     flex-shrink: 0;
-    @include fz_vw(32, 16);
+    @include fz_vw(62, 32);
     font-weight: bold;
   }
 

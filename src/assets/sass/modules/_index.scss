@@ -5,8 +5,6 @@
 
 @forward "contactForm";
 
-@forward "archiveItem";
-
 @forward "categoryList";
 @forward "pagination";
 
@@ -40,6 +38,8 @@
 @forward "./historyItem";
 
 @forward "./border";
-@forward "./archiveItem";
+// @forward "./archiveItem";
 
 @forward "./splash";
+@forward "./topMarquee";
+@forward "./columnItem";

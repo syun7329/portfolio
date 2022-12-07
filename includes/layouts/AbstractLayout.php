@@ -1,13 +1,14 @@
 <?php
 
-abstract class AbstractLayout {
+abstract class AbstractLayout
+{
 
-	protected $post;
+  protected $post;
 
-	public function __construct($post)
-	{
-		$this->post = $post;
-	}
+  public function __construct($post)
+  {
+    $this->post = $post;
+  }
 
-	abstract public function render();
+  abstract public function render();
 }

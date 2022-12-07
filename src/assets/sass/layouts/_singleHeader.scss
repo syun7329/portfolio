@@ -26,8 +26,9 @@
 
   &__title {
     @include mt_vw(8);
+    line-height: 1.5;
 
-    @include fz_vw(40);
+    @include fz_vw(40, 24);
   }
 
   &__line {
@@ -41,6 +42,7 @@
 
   &__excerpt {
     @include mt_vw(24, 16);
+    line-height: 2;
 
     @include fz_vw(16);
     text-align: right;

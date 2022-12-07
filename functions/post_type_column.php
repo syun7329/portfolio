@@ -24,6 +24,7 @@ function create_post_type_column()
       'public' => true,
       'menu_position' => 5,
       'show_in_rest' => true,
+      'has_archive' => true,
       'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments'),
     )
   );
@@ -51,4 +52,20 @@ function create_post_type_column()
   ));
 
   register_taxonomy_for_object_type('post_tag', 'column');
+
+  /**
+   * 
+   * アーカイブページの作成
+   * 
+   */
+  function column_has_archive($args, $post_type)
+  {
+    if ('post' == $post_type) {
+      $args['rewrite'] = true; // リライトを有効にする
+      $args['has_archive'] = 'column'; // 任意のスラッグ名
+    }
+    return $args;
+  }
+
+  add_filter('register_post_type_args', 'column_has_archive', 10, 2);
 }

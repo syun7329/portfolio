@@ -13,6 +13,8 @@
     flex-direction: column;
 
     width: 80%;
+
+    @include pt_vw(80, 40);
   }
 
   &__list {

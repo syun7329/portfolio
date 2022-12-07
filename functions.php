@@ -22,13 +22,15 @@ require_once(__DIR__ . '/includes/factories/LayoutFactory.php');
 
 require_once(__DIR__ . '/includes/layouts/AbstractLayout.php');
 require_once(__DIR__ . '/includes/layouts/Business.php');
-require_once(__DIR__ . '/includes/layouts/Column.php');
+require_once(__DIR__ . '/includes/layouts/ColumnFrontPage.php');
+require_once(__DIR__ . '/includes/layouts/ColumnArchive.php');
 
 require_once(__DIR__ . '/includes/services/PostService.php');
 require_once(__DIR__ . '/includes/services/TaxonomyService.php');
 
 require_once(__DIR__ . '/includes/utils/PostUtils.php');
 require_once(__DIR__ . '/includes/utils/ImageUtils.php');
+require_once(__DIR__ . '/includes/utils/PostArrayUtils.php');
 
 
 

@@ -29,6 +29,14 @@
     }
   }
 
+  &__text {
+    p {
+      @include fz_vw(16);
+      line-height: 2;
+      font-family: $yuGothic;
+    }
+  }
+
   &__name {
     @include pt_vw(0, 32);
     @include fz_vw(40);
@@ -39,11 +47,6 @@
     @include pt_vw(40, 24);
     @include fz_vw(16);
     line-height: 2;
-
-    & > * {
-      @include fz_vw(16);
-      line-height: 2;
-    }
   }
 
   &__logoWrapper {
@@ -60,9 +63,6 @@
     @include responsive(tab) {
       width: 100%;
     }
-  }
-
-  &__img {
   }
 
   &__title {
@@ -93,18 +93,28 @@
     }
   }
 
-  &__img {
-    @include mt_vw(80, 32);
-    position: relative;
+  &__BottomImgWrapper {
+    width: 100%;
+    filter: grayscale(1);
+    transition: $transition;
+    @include mt_vw(80, 40);
 
-    & > img {
-      height: 100%;
+    @include aspectRatio(449, 1280);
+
+    &:hover {
+      filter: grayscale(0);
     }
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include h_vw(62, 48);
 
     @include responsive(tab) {
-      width: 100%;
-      height: vw(237, tab);
-      object-fit: cover;
     }
   }
 }

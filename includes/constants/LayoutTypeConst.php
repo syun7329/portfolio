@@ -3,5 +3,6 @@
 class LayoutTypeConst
 {
   const BUSINESS = 'business';
-  const COLUMN = 'column';
+  const COLUMN_FRONTPAGE = 'column-front-page';
+  const COLUMN_ARCHIVE = 'column-archive';
 }

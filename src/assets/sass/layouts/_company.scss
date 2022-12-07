@@ -32,9 +32,19 @@
       @include pt_vw(24);
     }
 
-    .border {
-      @include responsive(tab) {
-        position: static;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: #000;
+    }
+
+    &.animate {
+      &::before {
+        animation: borderAnimationLeftToRight 1.5s ease-in-out forwards;
       }
     }
   }
