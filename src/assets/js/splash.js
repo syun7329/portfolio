@@ -3,8 +3,8 @@ const SPLASH_SESSION_KEY = "SPLASH_SESSION_KEY";
 const done = sessionStorage.getItem(SPLASH_SESSION_KEY);
 
 if (done == "done") {
-  runSplash();
-  // runNoSplash();
+  // runSplash();
+  runNoSplash();
 } else {
   runSplash();
 }

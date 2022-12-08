@@ -18,7 +18,7 @@ targets.forEach((target) => {
       trigger: target,
       start: "top center",
       once: false,
-      // markers: true,
+      markers: true,
     },
   });
 });
