@@ -3,9 +3,8 @@ const SPLASH_SESSION_KEY = "SPLASH_SESSION_KEY";
 const done = sessionStorage.getItem(SPLASH_SESSION_KEY);
 
 if (done == "done") {
-  // runSplash();
-
-  runNoSplash();
+  runSplash();
+  // runNoSplash();
 } else {
   runSplash();
 }
@@ -44,35 +43,6 @@ function runSplash() {
 
 //   return LogoPosition;
 // }
-
-function runNoSplash() {
-  gsap.set(".js-splash", {
-    backgroundColor: "transparent",
-    duration: 0.6,
-  });
-
-  gsap.set(".js-c", {
-    stroke: "#000",
-    duration: 0.6,
-  });
-
-  gsap.set(".js-g", {
-    fill: "#000",
-    duration: 0.6,
-  });
-
-  gsap.set(".js-lineBox", {
-    opacity: 0,
-    duration: 0.6,
-  });
-
-  gsap.set(".js-splashBox", {
-    width: "3.90625vw",
-    top: "calc(1.32815vw + 27px)",
-    position: "fixed",
-    height: "auto",
-  });
-}
 
 function _initSplash() {
   gsap.set(".js-outlineTop", {
@@ -160,7 +130,7 @@ function _runSplashTimeline() {
     .to(
       ".js-outlineCenterLeft",
       {
-        top: 0,
+        top: 1.75,
         duration: lineDuration,
       },
       "line"
@@ -380,7 +350,7 @@ function _runSplashTimeline() {
 function _runSplashTimeline_sp() {
   const tl = gsap.timeline();
 
-  const lineDuration = 0.6;
+  const lineDuration = 0.5;
 
   tl.addLabel("line")
     .to(
@@ -548,7 +518,7 @@ function _runSplashTimeline_sp() {
     .to(
       ".js-line",
       {
-        opacity: 0,
+        opacity: 0.5,
         duration: 0.6,
       },
       "hideHtml"
@@ -585,8 +555,8 @@ function _runSplashTimeline_sp() {
       ".js-splashBox",
       {
         width: "13.333333333333333333vw",
-        top: "calc(5.0666666666666666667vw + 19px)",
-        left: "calc(9.0666666666666666667vw + 34px)",
+        top: "10.9vw",
+        left: "16.65vw",
         position: "fixed",
         duration: 0.6,
       },
@@ -598,7 +568,6 @@ function _runSplashTimeline_sp() {
       {
         backgroundColor: "transparent",
         duration: 0.6,
-        // display: "none",
       },
       "miniLog"
     )
@@ -622,16 +591,49 @@ function _runSplashTimeline_sp() {
     .to(
       ".js-header__logoArea",
       {
-        // opacity: 1,
-        // duration: 0,
+        opacity: 1,
+        duration: 0,
       },
       "hideLogo"
     )
     .to(
       ".js-splash",
       {
-        // display: "none",
+        display: "none",
       },
       "hideLogo"
     );
+}
+
+function runNoSplash() {
+  gsap.set(".js-splash", {
+    display: "none",
+  });
+
+  gsap.set(".js-splash", {
+    backgroundColor: "transparent",
+    duration: 0.6,
+  });
+
+  gsap.set(".js-c", {
+    stroke: "#000",
+    duration: 0.6,
+  });
+
+  gsap.set(".js-g", {
+    fill: "#000",
+    duration: 0.6,
+  });
+
+  gsap.set(".js-lineBox", {
+    opacity: 0,
+    duration: 0.6,
+  });
+
+  gsap.set(".js-splashBox", {
+    width: "3.90625vw",
+    top: "calc(1.32815vw + 27px)",
+    position: "fixed",
+    height: "auto",
+  });
 }

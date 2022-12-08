@@ -22,6 +22,7 @@ require_once(__DIR__ . '/includes/factories/LayoutFactory.php');
 
 require_once(__DIR__ . '/includes/layouts/AbstractLayout.php');
 require_once(__DIR__ . '/includes/layouts/Business.php');
+require_once(__DIR__ . '/includes/layouts/Adoption.php');
 require_once(__DIR__ . '/includes/layouts/ColumnFrontPage.php');
 require_once(__DIR__ . '/includes/layouts/ColumnArchive.php');
 

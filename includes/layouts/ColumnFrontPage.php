@@ -58,7 +58,7 @@ class ColumnFrontPage
           </a>
         </articel>
 
-        <div class=\"columnList__item columnItem js-borderAnimation columnItem--title\">
+        <div class=\"columnList__item columnItem js-borderAnimation columnItem--title underTabNone\">
 
           <svg class=\"columnItem__svg\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 427.972 339.094\">
             <g class=\"js-column\" id=\"グループ_2691\" data-name=\"グループ 2691\" transform=\"translate(-24 -91.304)\">

@@ -1,15 +1,8 @@
 <?php
-/*
-  Template Name: コラム一覧ページ
-  */
-?>
-
-
-<?php
 
 $postService = new PostService();
 $current_page = get_query_var('paged');
-$result = $postService->getPostsByPostType(LayoutTypeConst::COLUMN_ARCHIVE, PostTypeConst::COLUMN, 12, $current_page);
+$result = $postService->getPostsByTaxonomy(LayoutTypeConst::COLUMN_ARCHIVE, PostTypeConst::COLUMN, TaxonomySlugConst::COLUMN_CAT, 12, $current_page);
 
 $args = array(
   'type'                     => PostTypeConst::COLUMN,

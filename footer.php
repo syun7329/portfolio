@@ -30,27 +30,23 @@
         </li>
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url() ?>" class="footerNav__link">Service</a>
+          <a href="<?php echo home_url('about-us') ?>" class="footerNav__link">About Us</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">Works</a>
+          <a href="<?php echo home_url('restaurants') ?>" class="footerNav__link">Restaurants</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">Recruit</a>
+          <a href="<?php echo home_url('adoption') ?>" class="footerNav__link">Adoption</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('about-us') ?>" class="footerNav__link">About</a>
+          <a href="<?php echo home_url('about-us') ?>#company" class="footerNav__link">Company</a>
         </li>
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">Company</a>
-        </li>
-
-        <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">History</a>
+          <a href="<?php echo home_url('about-us') ?>#history" class="footerNav__link">History</a>
         </li>
 
         <li class="footerNav__item">

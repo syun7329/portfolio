@@ -54,6 +54,15 @@
     }
   }
 
+  &:nth-child(9),
+  &:nth-child(10) {
+    @include responsive(tab) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
   &--archive {
     &:nth-child(10),
     &:nth-child(11),

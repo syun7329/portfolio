@@ -1,5 +1,9 @@
-// const selected = document.getElementById(".js-select");
+const selectBox = document.getElementById("js-select");
+const path = document.querySelector("body").dataset["tmpdir"];
 
-// selected.onchange = function () {
-//   window.location.href = selected.value;
-// };
+if (selectBox) {
+  selectBox.addEventListener("change", (e) => {
+    const value = e.target.value;
+    location.href = value;
+  });
+}

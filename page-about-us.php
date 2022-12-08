@@ -22,7 +22,7 @@ Template Name: about-us
     </div>
 
 
-    <div class="history">
+    <div class="history" id="history">
 
       <div class="history__inner">
 
@@ -148,7 +148,9 @@ Template Name: about-us
     </div>
 
 
-    <div class="company">
+
+
+    <div class="company" id="company">
 
       <div class="company__inner">
 

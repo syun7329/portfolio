@@ -1,11 +1,11 @@
-const targets = document.querySelectorAll(".js-textAnimation");
 const jsText = ".js-textAnimation span";
+const targets = gsap.utils.toArray(".js-textAnimation");
 
 targets.forEach((target) => {
   target.innerHTML = splitText(target);
 
   gsap.set(jsText, {
-    y: 100,
+    y: 200,
   });
 
   gsap.to(jsText, {
@@ -17,15 +17,15 @@ targets.forEach((target) => {
     scrollTrigger: {
       trigger: target,
       start: "top center",
-      once: true,
+      once: false,
       // markers: true,
     },
   });
 });
 
-function splitText(el) {
+function splitText(e) {
   let splitText = "";
-  const text = el.textContent;
+  const text = e.textContent;
   const result = text.split("");
 
   for (let i = 0; i < result.length; i++) {

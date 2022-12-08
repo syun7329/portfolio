@@ -15,7 +15,7 @@ $result = $postService->getPostsByTaxonomy(PostTypeConst::BUSINESS, PostTypeCons
 
 <main class="main">
 
-  <div class="main__inner">
+  <div class="main__inner main__inner--pb0">
 
     <div class="pageHeader">
       <div class="pageHeader__inner">

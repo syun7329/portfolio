@@ -16,6 +16,11 @@ class LayoutFactory
         return new ColumnArchive($post);
         break;
 
+      case LayoutTypeConst::ADOPTION:
+
+        return new Adoption($post);
+        break;
+
       default:
         return false;
         break;
