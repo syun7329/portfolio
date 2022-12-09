@@ -7,5 +7,4 @@ ScrollTrigger.create({
   start: `top +${position}px`, 
   end: `bottom +${position + svgHeight}px`,
 	pin: ".js-sticky",
-	markers: true,
 });
