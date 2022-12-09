@@ -21,6 +21,9 @@ $args = array(
 
 $categories = get_categories($args);
 
+$queried_object = get_queried_object();
+$term_id = $queried_object->term_id;
+
 ?>
 
 <?php get_header(); ?>
@@ -41,14 +44,13 @@ $categories = get_categories($args);
           </p>
 
 
-
           <select class="pageHeader__select" name="select" onChange="location.href=value;">
             <option value="<?php echo home_url(); ?>/column/">ALL</option>
             <?php
+
             foreach ($categories as $category) {
               $categories = get_the_category($post->ID);
               $slug = $categories[0]->term_id;
-
 
               // 3. if文でカテゴリーページの場合 & 現在表示されているページと同じカテゴリーの場合「selected」属性を付与する
               if (is_category() && $slug == $category->term_id) {
@@ -58,6 +60,7 @@ $categories = get_categories($args);
               }
             }
             ?>
+
           </select>
 
         </div>
