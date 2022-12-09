@@ -156,6 +156,30 @@
       </li>
 
       <li class="drawerNav__item drawer-menu-item">
+        <a class="drawerNav__link" href="<?php echo home_url("real-estate"); ?>#headOffice">
+          <span class="drawerNav__text">REAL ESTATE</span>
+          <img class="drawerNav__arrow"
+            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
+        </a>
+      </li>
+
+      <li class="drawerNav__item drawer-menu-item">
+        <a class="drawerNav__link" href="<?php echo home_url("mail-order"); ?>#headOffice">
+          <span class="drawerNav__text">MAIL ORDER</span>
+          <img class="drawerNav__arrow"
+            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
+        </a>
+      </li>
+
+      <li class="drawerNav__item drawer-menu-item">
+        <a class="drawerNav__link" href="<?php echo home_url("event"); ?>#headOffice">
+          <span class="drawerNav__text">EVENT</span>
+          <img class="drawerNav__arrow"
+            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
+        </a>
+      </li>
+
+      <li class="drawerNav__item drawer-menu-item">
         <a class="drawerNav__link" href="<?php echo home_url("contact"); ?>">
           <span class="drawerNav__text">CONTACT</span>
           <img class="drawerNav__arrow"
