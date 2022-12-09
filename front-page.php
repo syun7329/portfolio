@@ -1,7 +1,10 @@
 <?php
 
 $postService = new PostService();
+
 $column_post = $postService->getPostsByPostType(LayoutTypeConst::COLUMN_FRONTPAGE, PostTypeConst::COLUMN, 10);
+
+$business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, PostTypeConst::BUSINESS, 10);
 
 ?>
 
@@ -125,11 +128,10 @@ $column_post = $postService->getPostsByPostType(LayoutTypeConst::COLUMN_FRONTPAG
         <div class="about__main">
 
           <p class="about__detail">
-            『全ての人々を笑顔にする』をモットーにチャレンジ。失敗を恐れずに常に進化、成長、アップデートしていく会社でありたい。
-            飲食事業を中心に、通販事業、不動産事業、厨房機器販売事業、イベント事業、化粧品事業など幅広い分野で事業を展開しています。
+            失敗を恐れずに常に進化、成長、アップデートしていく会社でありたい。<br>
+            1992年の創業以来、飲食事業を中心に、通販事業・不動産事業・厨房機器販売事業・イベント事業・化粧品事業など幅広い分野で事業を展開してきました。
             特に飲食事業では「レモホル酒場」「焼鍋肉たむら」「肉韓バルたむら」「韓国屋台Mr.チージュ」「石田一龍」など様々な業態の飲食店を全国に展開しています。
-            従来の固定概念に捉われることなく、常にアンテナをはり、高い感度でアップデートできるように成長してきた会社です。これからの時代も高い意欲を持ち、お客様、弊社ファミリーそして社会の全てが笑顔になる事を創っていきます。
-            私たちは成長したい人を求めています。一緒に充実した日々を過ごしましょう！
+            従来の固定概念に捉われることなく、常にアンテナをはり、高い感度でアップデートできるように成長してきました。これからの時代も高い意欲を持ち、お客様、弊社ファミリーそして社会の全てが笑顔になる事を創っていきます。
           </p>
 
           <a href="<?php echo home_url("about") ?>" class="about__button viewAllButton">

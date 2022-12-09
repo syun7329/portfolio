@@ -3,7 +3,7 @@
 .formBlock {
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
     display: block;
     position: absolute;

@@ -42,6 +42,12 @@
       background: #000;
     }
 
+    @include responsive(tab) {
+      &::before {
+        bottom: 50%;
+      }
+    }
+
     &.animate {
       &::before {
         animation: borderAnimationLeftToRight 1.5s ease-in-out forwards;
