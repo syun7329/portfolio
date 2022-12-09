@@ -2,7 +2,13 @@
 
 $postService = new PostService();
 $current_page = get_query_var('paged');
-$result = $postService->getPostsByTaxonomy(LayoutTypeConst::COLUMN_ARCHIVE, PostTypeConst::COLUMN, TaxonomySlugConst::COLUMN_CAT, 12, $current_page);
+
+$queried_object = get_queried_object();
+
+$term = $queried_object->name;
+$current_term_id = $queried_object->term_id;
+
+$result = $postService->getPostsByTerm(LayoutTypeConst::COLUMN_ARCHIVE, PostTypeConst::COLUMN, TaxonomySlugConst::COLUMN_CAT, $term, 12, $current_page);
 
 $args = array(
   'type'                     => PostTypeConst::COLUMN,
@@ -20,9 +26,6 @@ $args = array(
 );
 
 $categories = get_categories($args);
-
-$queried_object = get_queried_object();
-$term_id = $queried_object->term_id;
 
 ?>
 
@@ -43,7 +46,6 @@ $term_id = $queried_object->term_id;
             category is
           </p>
 
-
           <select class="pageHeader__select" name="select" onChange="location.href=value;">
             <option value="<?php echo home_url(); ?>/column/">ALL</option>
             <?php
@@ -53,7 +55,7 @@ $term_id = $queried_object->term_id;
               $slug = $categories[0]->term_id;
 
               // 3. if文でカテゴリーページの場合 & 現在表示されているページと同じカテゴリーの場合「selected」属性を付与する
-              if (is_category() && $slug == $category->term_id) {
+              if ($current_term_id == $category->term_id) {
                 echo '<option value="' . get_category_link($category->term_id) . '" selected>' . $category->name . '</option>';
               } else {
                 echo '<option value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
