@@ -11,5 +11,7 @@
 
   &__text {
     @include fz_vw(12);
+    font-family: $futura;
+    @include mx_vw(16);
   }
 }

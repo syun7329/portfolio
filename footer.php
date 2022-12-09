@@ -38,6 +38,18 @@
         </li>
 
         <li class="footerNav__item">
+          <a href="<?php echo home_url('real-estate') ?>" class="footerNav__link">Real Estate</a>
+        </li>
+
+        <li class="footerNav__item">
+          <a href="<?php echo home_url('mail-order') ?>" class="footerNav__link">Mail Order</a>
+        </li>
+
+        <li class="footerNav__item">
+          <a href="<?php echo home_url('event') ?>" class="footerNav__link">Event</a>
+        </li>
+
+        <li class="footerNav__item">
           <a href="<?php echo home_url('adoption') ?>" class="footerNav__link">Adoption</a>
         </li>
 
@@ -50,7 +62,7 @@
         </li>
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">Privacy Policy</a>
+          <a href="<?php echo home_url('privacy-policy') ?>" class="footerNav__link">Privacy Policy</a>
         </li>
 
       </ul>
