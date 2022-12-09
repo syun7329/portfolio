@@ -49,6 +49,14 @@
     text-decoration: none;
 
     transform: $transition;
+
+    &:hover {
+      text-decoration: none;
+
+      & > span {
+        text-decoration: none;
+      }
+    }
   }
 
   &__text {
@@ -56,6 +64,7 @@
     font-weight: bold;
     color: $black;
     border-bottom: none;
+    text-decoration: none;
 
     &:hover {
       text-decoration: none;

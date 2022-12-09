@@ -27,8 +27,7 @@ Template Name: about-us
       <div class="history__inner">
 
         <div class="history__sticky js-history__sticky js-sticky">
-          <svg class="history__svg js-history__svg" xmlns="http://www.w3.org/2000/svg" width="348.691" height="381.282"
-            viewBox="0 0 348.691 381.282">
+          <svg class="history__svg js-history__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348.691 381.282">
             <g id="グループ_2668" data-name="グループ 2668" transform="translate(-155.995 -451.366)">
               <path id="パス_597" data-name="パス 597"
                 d="M15.995-325.384v6.4H58.039V-6.4H15.995V0H166.348V-6.4H124.3V-162.692H256.377V-6.4H214.333V0H364.686V-6.4H322.642V-318.986h42.044v-6.4H214.333v6.4h42.044v149.9H124.3v-149.9h42.044v-6.4Z"
@@ -47,10 +46,10 @@ Template Name: about-us
             <div class="historyItem__inner">
               <div class="historyItem__time">1976</div>
               <div class="historyItem__detail">
-                石永隆【石立吉】個人事務所長崎で創業<br>
-                所有不動産も多数<br>
-                多数にわたる飲食店出店<br>
-                多岐にわたる事業を展開<br>
+                <p class="">石永隆【石立吉】個人事務所長崎で創業</p>
+                <p class="">所有不動産も多数</p>
+                <p class="">多数にわたる飲食店出店</p>
+                <p class="">多岐にわたる事業を展開</p>
               </div>
             </div>
           </li>
@@ -60,8 +59,8 @@ Template Name: about-us
             <div class="historyItem__inner">
               <div class="historyItem__time">1992</div>
               <div class="historyItem__detail">
-                年商2億円突破<br>
-                有限会社銀河コーポレーション起業<br>
+                <p class="">年商2億円突破</p>
+                <p class="">有限会社銀河コーポレーション起業</p>
               </div>
             </div>
           </li>
@@ -71,11 +70,10 @@ Template Name: about-us
             <div class="historyItem__inner">
               <div class="historyItem__time">2015</div>
               <div class="historyItem__detail">
-                代表取締役社長に石原義明が就任<br>
-
-                当時年商4,000万負債2億円<br>
-                銀行、公庫などリスケ状態<br>
-                ここから早急な会社再建が始まる<br>
+                <p class="">代表取締役社長に石原義明が就任</p>
+                <p class="">当時年商4,000万負債2億円</p>
+                <p class="">銀行、公庫などリスケ状態</p>
+                <p class="">ここから早急な会社再建が始まる</p>
               </div>
             </div>
           </li>
@@ -85,10 +83,10 @@ Template Name: about-us
             <div class="historyItem__inner">
               <div class="historyItem__time">2017</div>
               <div class="historyItem__detail">
-                資本金300万円から1,000万円へ増資<br>
-                大阪に本店所在地変更<br>
-                九州初上陸【炭火焼肉たむら長崎店】出店<br>
-                フードフェスなども多数出店<br>
+                <p class="">資本金300万円から1,000万円へ増資</p>
+                <p class="">大阪に本店所在地変更</p>
+                <p class="">九州初上陸【炭火焼肉たむら長崎店】出店</p>
+                <p class="">フードフェスなども多数出店</p>
               </div>
             </div>
           </li>
@@ -98,9 +96,9 @@ Template Name: about-us
             <div class="historyItem__inner">
               <div class="historyItem__time">2018</div>
               <div class="historyItem__detail">
-                通販サイト【たむらのホルモン鍋開設】<br>
-                飲食店多数出店<br>
-                資本金1,000万円から5,000万円へ増資<br>
+                <p class="">通販サイト【たむらのホルモン鍋開設】</p>
+                <p class="">飲食店多数出店</p>
+                <p class="">資本金1,000万円から5,000万円へ増資</p>
               </div>
             </div>
           </li>
@@ -110,11 +108,11 @@ Template Name: about-us
             <div class="historyItem__inner">
               <div class="historyItem__time">2019</div>
               <div class="historyItem__detail">
-                年商4,4億円突破<br>
-                飲食店多数出店<br>
-                フィットネス事業開始<br>
-                仲介事業0円賃貸事業開始<br>
-                飲食店開業サポート事業開始<br>
+                <p class="">年商4,4億円突破</p>
+                <p class="">飲食店多数出店</p>
+                <p class="">フィットネス事業開始</p>
+                <p class="">仲介事業0円賃貸事業開始</p>
+                <p class="">飲食店開業サポート事業開始</p>
               </div>
             </div>
           </li>
@@ -124,19 +122,18 @@ Template Name: about-us
             <div class="historyItem__inner">
               <div class="historyItem__time">2020〜</div>
               <div class="historyItem__detail">
-                資本金5,000万円から1億円に増資<br>
-                社名変更 有限会社GCへ<br>
-                年商15億円突破<br>
-                イベント、フェス運営飲食店本部事業開始<br>
-                大手複合施設や有名企業からの多数飲食店出店依頼<br>
-                化粧品事業開始<br>
-                大手LINE社商品仕入れ開始<br>
-                LINEキャラクターのオリジナル消毒ジェルを販売開始<br>
-                リース事業開始【オリコなどの大手金融会社との業務提携】<br>
-                本店登記を大阪から東京へ移す<br>
-                厨房設備等販売事業、PCR事業開始<br>
-                東京本店、大阪支店、福岡支店、長崎支店、大分支店として<br>
-                事業拡大中<br>
+                <p class="">資本金5,000万円から1億円に増資</p>
+                <p class="">社名変更 有限会社GCへ</p>
+                <p class="">年商15億円突破</p>
+                <p class="">イベント、フェス運営飲食店本部事業開始</p>
+                <p class="">大手複合施設や有名企業からの多数飲食店出店依頼</p>
+                <p class="">化粧品事業開始</p>
+                <p class="">大手LINE社商品仕入れ開始</p>
+                <p class="">LINEキャラクターのオリジナル消毒ジェルを販売開始</p>
+                <p class="">リース事業開始【オリコなどの大手金融会社との業務提携】</p>
+                <p class="">本店登記を大阪から東京へ移す</p>
+                <p class="">厨房設備等販売事業、PCR事業開始</p>
+                <p class="">東京本店、大阪支店、福岡支店、長崎支店、大分支店として事業拡大中</p>
               </div>
             </div>
           </li>
@@ -167,8 +164,8 @@ Template Name: about-us
         </svg>
 
         <h2 class="company__title js-borderAnimation">
-          <p class="company__titleText company__titleText--en">COMPANY PROFILE</p>
-          <p class="company__titleText company__titleText--ja">会社概要</p>
+          <p class="company__titleText company__titleText--en js-textAnimation">COMPANY PROFILE</p>
+          <p class="company__titleText company__titleText--ja js-textAnimation">会社概要</p>
         </h2>
 
         <section class="company__section">
@@ -177,56 +174,56 @@ Template Name: about-us
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title">社名</p>
-                <p class="borderItem__content">有限会社GC</p>
+                <p class="borderItem__title js-textAnimation">社名</p>
+                <p class="borderItem__content js-textAnimation">有限会社GC</p>
               </div>
 
             </li>
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title">代表者名</p>
-                <p class="borderItem__content">石原義明</p>
+                <p class="borderItem__title js-textAnimation">代表者名</p>
+                <p class="borderItem__content js-textAnimation">石原義明</p>
               </div>
 
             </li>
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title">資本金</p>
-                <p class="borderItem__content">1億円</p>
+                <p class="borderItem__title js-textAnimation">資本金</p>
+                <p class="borderItem__content js-textAnimation">1億円</p>
               </div>
 
             </li>
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title">設立</p>
-                <p class="borderItem__content">1992年07月</p>
+                <p class="borderItem__title js-textAnimation">設立</p>
+                <p class="borderItem__content js-textAnimation">1992年07月</p>
               </div>
 
             </li>
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title">本社所在地</p>
-                <p class="borderItem__content">東京都港区赤坂7-6-15-505</p>
+                <p class="borderItem__title js-textAnimation">本社所在地</p>
+                <p class="borderItem__content js-textAnimation">東京都港区赤坂7-6-15-505</p>
               </div>
 
             </li>
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title">業種</p>
-                <p class="borderItem__content">サービス業</p>
+                <p class="borderItem__title js-textAnimation">業種</p>
+                <p class="borderItem__content js-textAnimation">サービス業</p>
               </div>
 
             </li>
 
           </ul>
 
-          <svg class="company__svg underTabNone sectionTitle " xmlns="http://www.w3.org/2000/svg" width="402.344"
-            height="339.094" viewBox="0 0 402.344 339.094">
+          <svg class="company__svg underTabNone sectionTitle " xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 402.344 339.094">
             <g id="グループ_2668" data-name="グループ 2668" transform="translate(-16170.807 39.946)">
               <path id="パス_597" data-name="パス 597"
                 d="M300.249-232.156v-93.228h-7.312q-1.371,6.4-4.57,8t-9.6,1.6a50.245,50.245,0,0,1-14.624-2.742q-8.683-2.742-19.423-5.712t-23.307-5.712a127.5,127.5,0,0,0-27.191-2.742q-29.248,0-59.639,12.11a181.221,181.221,0,0,0-55.069,34.5,181.659,181.659,0,0,0-40.444,53.926q-15.767,31.533-15.767,70.378,0,35.646,14.167,66.265a174.989,174.989,0,0,0,37.7,53.241A176.415,176.415,0,0,0,129.788-6.626,165.119,165.119,0,0,0,194.225,6.4,149.411,149.411,0,0,0,222.1,3.885Q235.355,1.371,246.551-1.6t19.88-5.484A53.431,53.431,0,0,1,280.6-9.6q6.4,0,9.6,2.056T295.679,0h7.312V-96.884h-7.312a154.532,154.532,0,0,1-12.8,36.1A126.948,126.948,0,0,1,261.4-29.934,103.344,103.344,0,0,1,231.927-8.226Q215.247,0,194.682,0q-25.592,0-44.1-7.312T120.42-32.9q-11.654-18.28-17.138-49.356t-5.484-78.6q0-36.1,2.742-66.493t12.567-52.326q9.825-21.936,29.02-34.275T194.682-326.3q24.678,0,41.358,8.911a89.115,89.115,0,0,1,27.877,22.85,129.4,129.4,0,0,1,18.28,30.619q7.083,16.68,12.11,31.761Z"

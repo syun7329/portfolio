@@ -40,25 +40,34 @@ $categories = get_categories($args);
             category is
           </p>
 
-          <select class="pageHeader__select" id="js-select">
-            <option class="" value="">
-              ALL
-            </option>
-            <?php foreach ($categories as $category) : ?>
-            <option
-              onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)"
-              class="" value="<?php echo get_category_link($category->term_id) ?>">
-              <?php echo $category->name ?>
-            </option>
-            <?php endforeach; ?>
+
+
+          <select class="pageHeader__select" name="select" onChange="location.href=value;">
+            <option value="<?php echo home_url(); ?>/column/">ALL</option>
+            <?php
+            foreach ($categories as $category) {
+              $categories = get_the_category($post->ID);
+              $slug = $categories[0]->term_id;
+
+
+              // 3. if文でカテゴリーページの場合 & 現在表示されているページと同じカテゴリーの場合「selected」属性を付与する
+              if (is_category() && $slug == $category->term_id) {
+                echo '<option value="' . get_category_link($category->term_id) . '" selected>' . $category->name . '</option>';
+              } else {
+                echo '<option value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
+              }
+            }
+            ?>
           </select>
+
         </div>
 
-
       </div>
+
     </div>
 
     <div class="archive">
+
 
       <div class="archive__inner">
 

@@ -4,22 +4,22 @@
 // カスタム投稿タイプの作成
 // =================================================
 
-add_action('init', 'create_post_type_business');
+add_action('init', 'create_post_type_adoption');
 
 /**
  * 
  * カスタム投稿タイプの作成 
  * 
  */
-function create_post_type_business()
+function create_post_type_adoption()
 {
 
   register_post_type(
-    'business',
+    'adoption',
     array(
       'labels' => array(
-        'name' => __('事業'),
-        'singular_name' => __('business')
+        'name' => __('採用'),
+        'singular_name' => __('adoption')
       ),
       'public' => true,
       'menu_position' => 5,
@@ -29,7 +29,7 @@ function create_post_type_business()
   );
 
   // カテゴリの追加
-  register_taxonomy('business_cat', 'business', array(
+  register_taxonomy('adoption_cat', 'adoption', array(
     'hierarchical' => true,
     'labels' => array( /* 表示させる文字 */
       'name' => 'カテゴリ',
@@ -46,9 +46,9 @@ function create_post_type_business()
     'show_ui' => true, /* 管理画面にメニューを作る */
     'show_in_rest' => true,
     'rewrite' => array(
-      'slug' => 'business_cat', 'with_front' => true, 'hierarchical' => false
+      'slug' => 'adoption_cat', 'with_front' => true, 'hierarchical' => false
     )
   ));
 
-  register_taxonomy_for_object_type('post_tag', 'business');
+  register_taxonomy_for_object_type('post_tag', 'adoption');
 }

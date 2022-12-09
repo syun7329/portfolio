@@ -47,11 +47,17 @@ class PostService
     $arg = array(
       'post_type'        =>     $post_type,
       'posts_per_page'   =>     $posts_per_page,
-      'business_cat'     =>     $taxonomy_slug,
       'paged'            =>     $paged,
       'post_status'      =>     'publish',
       'order'            =>     'DESC',
       'orderby'          =>     'date',
+      'tax_query' => [
+        [
+          'taxonomy' => 'business_cat',
+          'field'    => 'slug',
+          'terms'    => $taxonomy_slug,
+        ],
+      ],
     );
 
     $query = new WP_Query($arg);

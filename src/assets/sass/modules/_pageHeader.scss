@@ -62,8 +62,8 @@
   &__select {
     position: relative;
 
-    @include px_vw(24);
-    @include py_vw(16);
+    @include px_vw(16);
+    @include py_vw(8);
 
     background: $black;
     border-radius: 100px;

@@ -14,11 +14,11 @@ Template Name: privacy-policy
 
       <div class="pageHeader__inner">
 
-        <h1 class="pageHeader__title">
-          Privacy Policy
+        <h1 class="pageHeader__title js-textAnimation">
+          Privacy&nbsp;Policy
         </h1>
 
-        <h2 class="pageHeader__subTitle">
+        <h2 class="pageHeader__subTitle js-textAnimation">
           プライバシーポリシー
         </h2>
 

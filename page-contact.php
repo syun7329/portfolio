@@ -12,10 +12,10 @@ Template Name: contact
 
     <div class="pageHeader">
       <div class="pageHeader__inner">
-        <h1 class="pageHeader__title">
+        <h1 class="pageHeader__title js-textAnimation">
           Contact
         </h1>
-        <h2 class="pageHeader__subTitle">
+        <h2 class="pageHeader__subTitle js-textAnimation">
           お問い合わせ
         </h2>
       </div>

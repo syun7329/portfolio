@@ -8,20 +8,20 @@ targets.forEach((target) => {
   const span = q("span");
 
   gsap.set(span, {
-    y: 200,
+    y: "100%",
   });
 
   gsap.to(span, {
     y: 0,
     stagger: 0.05,
-    duration: 0.5,
+    duration: 1,
     ease: "power2.out",
 
     scrollTrigger: {
       trigger: target,
       start: "top center",
       once: true,
-      markers: true,
+      // markers: true,
     },
   });
 });

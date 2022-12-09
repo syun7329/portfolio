@@ -113,9 +113,8 @@ $column_post = $postService->getPostsByPostType(LayoutTypeConst::COLUMN_FRONTPAG
       <div class="about__inner">
 
         <svg class="about__svg sectionTitle " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.535 338.18">
-          <g class="borderTitleAnimation js-about" id="グループ_2663" data-name="グループ 2663"
-            transform="translate(-1658.575 1452.18)">
-            <path id="パス_589" data-name="パス 589"
+          <g class="js-about" id="グループ_2663" data-name="グループ 2663" transform="translate(-1658.575 1452.18)">
+            <path class="js-a" id="パス_589" data-name="パス 589"
               d="M138.471-260.033,192.4-135.272H87.287ZM-11.425-6.4V0H74.948V-6.4H34.275L85-128.874h109.68L247.694-6.4h-42.5V0H358.745V-6.4h-39.3L175.488-338.18H163.149L26.963-6.4Z"
               transform="translate(1670 -1114)" />
             <path class="js-bout" id="パス_590" data-name="パス 590"
@@ -150,9 +149,9 @@ $column_post = $postService->getPostsByPostType(LayoutTypeConst::COLUMN_FRONTPAG
 
     <section class="business" id="business">
 
-      <div class="business__inner js-sticky-trigger">
+      <div class="business__inner">
 
-        <ul class="business__list businessList">
+        <ul class="business__list businessList js-stickyContainer">
 
           <li class="businessList__item businessItem js-borderAnimation">
 
@@ -239,7 +238,7 @@ $column_post = $postService->getPostsByPostType(LayoutTypeConst::COLUMN_FRONTPAG
                 <g id="グループ_2689" data-name="グループ 2689">
                   <rect id="長方形_147" data-name="長方形 147" width="276" height="74" transform="translate(126 116)"
                     fill="#fff" />
-                  <path id="パス_586" data-name="パス 586"
+                  <path class="js-business" id="パス_586" data-name="パス 586"
                     d="M124.3-177.773V-318.986l10.054-.914q5.027-.457,10.054-.457,17.366,0,28.563,4.57a38.2,38.2,0,0,1,17.594,13.939q6.4,9.368,9.14,23.764t2.742,34.5a181.364,181.364,0,0,1-1.6,24.221,52.14,52.14,0,0,1-7.54,21.251q-5.941,9.368-17.823,14.852t-32.447,5.484ZM124.3-6.4V-171.375H150.81q22.85,0,35.417,9.368a60.178,60.178,0,0,1,18.737,22.165,78.017,78.017,0,0,1,7.54,25.82q1.371,13.024,1.371,20.794,0,27.877-4.341,45.014T196.967-21.479a41,41,0,0,1-19.88,13.024A93.087,93.087,0,0,1,150.81-5.027,240.577,240.577,0,0,1,124.3-6.4ZM58.039-318.986V-6.4H15.995V0H85Q104.2,0,123.161.457t38.16.457a227.829,227.829,0,0,0,39.3-3.885,144.065,144.065,0,0,0,41.359-13.939,98.545,98.545,0,0,0,32.9-27.42Q288.367-61.7,288.367-88.2q0-24.221-10.511-40.216a84.055,84.055,0,0,0-26.506-25.821,119.7,119.7,0,0,0-35.189-14.4,239.152,239.152,0,0,0-37.017-5.941V-176.4a178.658,178.658,0,0,0,26.735-5.941A130.549,130.549,0,0,0,236.269-195.6a86.7,86.7,0,0,0,24.906-22.164q10.282-13.481,10.282-33.133,0-21.936-10.511-36.56a77.432,77.432,0,0,0-26.734-23.307A123.3,123.3,0,0,0,198.338-323.1a205.057,205.057,0,0,0-37.474-3.656q-19.194,0-37.931.685T85-325.384H15.995v6.4Z"
                     transform="translate(113 443)" />
                 </g>

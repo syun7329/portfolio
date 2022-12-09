@@ -10,6 +10,7 @@ $TMP_DIR = get_template_directory_uri();
 $IMG_DIR = $TMP_DIR . "/dist/assets/images/";
 
 require_once(__DIR__ . '/functions/post_type_column.php');
+require_once(__DIR__ . '/functions/post_type_adoption.php');
 require_once(__DIR__ . '/functions/post_type_business.php');
 
 require_once(__DIR__ . '/includes/components/Pagination.php');

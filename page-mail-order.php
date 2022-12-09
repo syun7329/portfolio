@@ -19,10 +19,10 @@ $result = $postService->getPostsByTaxonomy(PostTypeConst::BUSINESS, PostTypeCons
 
     <div class="pageHeader">
       <div class="pageHeader__inner">
-        <h1 class="pageHeader__title">
-          Mail Order
+        <h1 class="pageHeader__title js-textAnimation">
+          Mail&nbsp;Order
         </h1>
-        <h2 class="pageHeader__subTitle">
+        <h2 class="pageHeader__subTitle js-textAnimation">
           通販事業
         </h2>
       </div>
