@@ -20,7 +20,7 @@ const aboutTimeline = gsap.timeline({
     trigger: "#about",
     start: "top 50%",
     once: true,
-    markers: true,
+    // markers: true,
   },
 });
 

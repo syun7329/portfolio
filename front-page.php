@@ -222,7 +222,7 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
 
         <div class="business__title sectionTitle js-sticky">
 
-          <div class="business__sticky js-business__sticky">
+          <div class="business__sticky">
 
             <svg id="stickySvg" class="business__svg sectionTitle " xmlns="http://www.w3.org/2000/svg" width="276"
               height="392.684" viewBox="0 0 276 392.684">
