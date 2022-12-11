@@ -19,9 +19,9 @@ targets.forEach((target) => {
 
     scrollTrigger: {
       trigger: target,
-      start: "top center",
+      start: "top 75%",
       once: true,
-      // markers: true,
+      markers: true,
     },
   });
 });

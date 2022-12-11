@@ -43,6 +43,11 @@
   }
 
   &__item {
+    &:hover {
+      .drawerNav__arrow {
+        transform: translateX(50%);
+      }
+    }
   }
 
   &__link {
@@ -50,16 +55,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 2vh 0;
-    text-decoration: none;
-
-    transform: $transition;
 
     &:hover {
       text-decoration: none;
-
-      & > span {
-        text-decoration: none;
-      }
     }
   }
 
@@ -67,8 +65,6 @@
     display: block;
     font-weight: bold;
     color: $black;
-    border-bottom: none;
-    text-decoration: none;
 
     &:hover {
       text-decoration: none;
@@ -79,6 +75,8 @@
     width: 22px;
     height: 22px;
     object-fit: contain;
+
+    transition: $transition;
   }
 
   &__buttons {

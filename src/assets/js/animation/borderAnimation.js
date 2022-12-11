@@ -4,10 +4,9 @@ elems.forEach((elem) => {
   gsap.to(elem, {
     scrollTrigger: {
       trigger: elem,
-      start: "top 50%",
+      start: "top 75%",
       once: true,
       toggleClass: { targets: elem, className: "animate" },
-      // markers: true,
     },
   });
 });
