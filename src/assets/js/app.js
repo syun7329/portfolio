@@ -113,3 +113,18 @@ clientTimeline
     duration: 1,
     ease: "power2.out",
   });
+
+// ハンバーガーの色
+gsap.to(".js-hambuger", {
+  background: "black",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".pageHeader",
+    start: "bottom top",
+    scrub: true,
+    // markers: true,
+    toggleClass: { targets: ".js-hambuger", className: "animate" },
+  },
+});
+
+window.addEventListener("resize", () => {});

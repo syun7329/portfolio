@@ -30,4 +30,15 @@
       font-family: $ryumin;
     }
   }
+
+  &__list {
+
+    & > *:not(:last-child){
+      @include pb_vw(5);
+    }
+  }
+
+  &__br {
+    @include mt_vw(12);
+  }
 }

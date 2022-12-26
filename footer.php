@@ -76,9 +76,18 @@
           </p>
 
           <p class="companyInfo__detail">
-            有限会社GC<br>
             〒<?php echo POST_CODE ?><br>
             <?php echo ADDRESS ?>
+          </p>
+
+          <p class="companyInfo__title">
+            Osaka Office
+          </p>
+
+          <p class="companyInfo__detail">
+            〒530-0041<br>
+            大阪府大阪市北区天神橋4丁目7-16<br>
+            大阪国際学院扇町ビル9階
           </p>
 
         </div>
