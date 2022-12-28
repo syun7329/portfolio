@@ -7,6 +7,7 @@
   &__card {
     box-sizing: border-box;
     width: 50%;
+    align-items: start;
 
     @include responsive(tab) {
       width: 100%;

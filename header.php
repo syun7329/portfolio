@@ -107,10 +107,21 @@
         </svg>
       </a>
 
+      <?php
+      if (is_front_page()) {
+        $hambugerBarColor = "black";
+      } else {
+        $hambugerBarColor = "white";
+      }
+      ?>
+
       <button class="header__hamburger hamburger drawer-toggle" aria-label="ドロワーメニューを開くボタン">
-        <span class="hamburger__bar hamburger__bar--top" style="background: <?php echo $fill ?>"></span>
-        <span class="hamburger__bar hamburger__bar--middle" style="background: <?php echo $fill ?>"></span>
-        <span class="hamburger__bar hamburger__bar--bottom" style="background: <?php echo $fill ?>"></span>
+        <span class="js-hambuger hamburger__bar hamburger__bar--top"
+          style="background: <?php echo $hambugerBarColor ?>"></span>
+        <span class="js-hambuger hamburger__bar hamburger__bar--middle"
+          style="background: <?php echo $hambugerBarColor ?>"></span>
+        <span class="js-hambuger hamburger__bar hamburger__bar--bottom"
+          style="background: <?php echo $hambugerBarColor ?>"></span>
       </button>
 
     </div>

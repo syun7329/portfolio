@@ -190,15 +190,21 @@ Template Name: about-us
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title js-textAnimation">設立</p>
-                <p class="borderItem__content js-textAnimation">1992年07月</p>
+                <p class="borderItem__content js-textAnimation">1992年7月</p>
               </div>
 
             </li>
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title js-textAnimation">本社所在地</p>
-                <p class="borderItem__content js-textAnimation">東京都港区赤坂7-6-15-505</p>
+                <p class="borderItem__title js-textAnimation">所在地</p>
+                <div class="borderItem__list">
+                  <p class="borderItem__content js-textAnimation">東京本社</p>
+                  <p class="borderItem__content js-textAnimation">東京都港区赤坂7-6-15-505</p>
+                  <p class="borderItem__content borderItem__br js-textAnimation">大阪支社</p>
+                  <p class="borderItem__content js-textAnimation">大阪府大阪市北区天神橋4丁目7-16</p>
+                  <p class="borderItem__content js-textAnimation">大阪国際学院扇町ビル9階</p>
+                </div>
               </div>
 
             </li>
@@ -207,6 +213,21 @@ Template Name: about-us
               <div class="borderItem__inner">
                 <p class="borderItem__title js-textAnimation">業種</p>
                 <p class="borderItem__content js-textAnimation">サービス業</p>
+              </div>
+
+            </li>
+
+            <li class="borderItem js-borderAnimation">
+              <div class="borderItem__inner">
+                <p class="borderItem__title js-textAnimation">グループ会社</p>
+                <div class="borderItem__list">
+                  <p class="borderItem__content js-textAnimation">株式会社マッチプラス</p>
+                  <p class="borderItem__content js-textAnimation">株式会社スサノオ</p>
+                  <p class="borderItem__content js-textAnimation">株式会社Ａ＆Ｂ</p>
+                  <p class="borderItem__content js-textAnimation">株式会社FUJI住設</p>
+                  <p class="borderItem__content js-textAnimation">株式会社 杉本事務所</p>
+                  <p class="borderItem__content js-textAnimation">株式会社ほていや</p>
+                </div>
               </div>
 
             </li>
