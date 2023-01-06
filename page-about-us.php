@@ -190,14 +190,14 @@ Template Name: about-us
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
                 <p class="borderItem__title js-textAnimation">設立</p>
-                <p class="borderItem__content js-textAnimation">1992年07月</p>
+                <p class="borderItem__content js-textAnimation">1992年7月</p>
               </div>
 
             </li>
 
             <li class="borderItem js-borderAnimation">
               <div class="borderItem__inner">
-                <p class="borderItem__title js-textAnimation">本社所在地</p>
+                <p class="borderItem__title js-textAnimation">所在地</p>
                 <p class="borderItem__content js-textAnimation">東京都港区赤坂7-6-15-505</p>
               </div>
 

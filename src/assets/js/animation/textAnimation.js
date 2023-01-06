@@ -21,7 +21,7 @@ targets.forEach((target) => {
       trigger: target,
       start: "top 75%",
       once: true,
-      markers: true,
+      // markers: true,
     },
   });
 });

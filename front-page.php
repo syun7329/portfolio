@@ -70,16 +70,25 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
               <a href="<?php echo home_url() ?>" class="topNav__link">TOP</a>
             </li>
             <li class="li topNav__item">
-              <a href="<?php echo home_url('about-us') ?>" class="topNav__link">ABOUT US</a>
+              <a href="<?php echo home_url('about-us') ?>" class="topNav__link">ABOUT&nbsp;US</a>
             </li>
             <li class="li topNav__item">
-              <a href="<?php echo home_url('restaurants') ?>" class="topNav__link">RESTAURANTS</a>
+              <a href="<?php echo home_url('restaurant') ?>" class="topNav__link">RESTAURANTS</a>
             </li>
             <li class="li topNav__item">
-              <a href="<?php echo home_url('adoption') ?>" class="topNav__link">ADOPTION</a>
+              <a href="<?php echo home_url('mail-order') ?>" class="topNav__link">MAIL&nbsp;ORDER</a>
+            </li>
+            <li class="li topNav__item">
+              <a href="<?php echo home_url('real-estate') ?>" class="topNav__link">REAL&nbsp;ESTATE</a>
+            </li>
+            <li class="li topNav__item">
+              <a href="<?php echo home_url('event') ?>" class="topNav__link">EVENT</a>
             </li>
             <li class="li topNav__item">
               <a href="<?php echo home_url('column') ?>" class="topNav__link">COLUMN</a>
+            </li>
+            <li class="li topNav__item">
+              <a href="<?php echo home_url('adoption') ?>" class="topNav__link">ADOPTION</a>
             </li>
             <li class="li topNav__item">
               <a href="<?php echo home_url('contact') ?>" class="topNav__link">CONTACT</a>
@@ -88,9 +97,9 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
         </nav>
 
         <picture class="top__img top__img--pc">
-          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/top-img.webp"
-            type="image/webp" />
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/top-img.jpg" />
+            <source srcset="<?php echo get_template_directory_uri(); ?>/dist/assets/images/top-img.webp"
+              type="image/webp" />
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/top-img.jpg" />
         </picture>
 
         <picture class="top__img top__img--sp">
@@ -163,7 +172,7 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
             <div class="businessItem__inner">
 
               <a class="businessItem__link" href="<?php echo home_url("restaurant") ?>">
-                <p class="businessItem__text businessItem__text--en js-textAnimation">Restaurant</p>
+                <p class="businessItem__text businessItem__text--en js-textAnimation">Restaurants</p>
                 <p class="businessItem__text businessItem__text--ja js-textAnimation">飲食事業</p>
               </a>
 
@@ -178,7 +187,7 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
             <div class="businessItem__inner">
 
               <a class="businessItem__link" href="<?php echo home_url("mail-order") ?>">
-                <p class="businessItem__text businessItem__text--en js-textAnimation">Mail order</p>
+                <p class="businessItem__text businessItem__text--en js-textAnimation">Mail&nbsp;Order</p>
                 <p class="businessItem__text businessItem__text--ja js-textAnimation">通販事業</p>
               </a>
 
@@ -192,7 +201,7 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
 
             <div class="businessItem__inner">
               <a class="businessItem__link" href="<?php echo home_url("real-estate") ?>">
-                <p class="businessItem__text businessItem__text--en js-textAnimation">Real estate</p>
+                <p class="businessItem__text businessItem__text--en js-textAnimation">Real&nbsp;Estate</p>
                 <p class="businessItem__text businessItem__text--ja js-textAnimation">不動産事業</p>
               </a>
 

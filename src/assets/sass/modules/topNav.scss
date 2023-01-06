@@ -11,10 +11,10 @@
 
     gap: vw(32, 16);
 
-    justify-content: center;
+    justify-content: space-between;
 
     @include responsive(tab) {
-      width: 80%;
+      width: 70%;
       gap: vw(24, tab), vw(32, tab);
     }
   }

@@ -26,7 +26,7 @@
       <ul class="footer__nav footerNav">
 
         <li class="footerNav__item">
-          <a href="<?php echo home_url('') ?>" class="footerNav__link">Home</a>
+          <a href="<?php echo home_url('') ?>" class="footerNav__link">Top</a>
         </li>
 
         <li class="footerNav__item">
@@ -76,9 +76,18 @@
           </p>
 
           <p class="companyInfo__detail">
-            有限会社GC<br>
             〒<?php echo POST_CODE ?><br>
             <?php echo ADDRESS ?>
+          </p>
+
+          <p class="companyInfo__title">
+            Osaka Office
+          </p>
+
+          <p class="companyInfo__detail">
+            〒530-0041<br>
+            大阪府大阪市北区天神橋4-7-16<br>
+            大阪国際学院扇町ビル9階
           </p>
 
         </div>

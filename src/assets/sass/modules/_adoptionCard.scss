@@ -18,6 +18,7 @@
     width: 80%;
     @include px_vw(48, 0);
     @include py_vw(48);
+    height: 100%;
   }
 
   &__imgWrapper {
@@ -35,7 +36,7 @@
 
   &__title {
     @include pt_vw(32);
-    @include fz_vw(24);
+    @include fz_vw(21);
     font-weight: bold;
     line-height: 1.5;
   }

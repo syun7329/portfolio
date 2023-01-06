@@ -19,6 +19,7 @@
   &__detail {
     width: vw(616);
     @include pt_vw(24);
+    @include ml_vw(80);
 
     font-family: $yuGothic;
 

@@ -23,6 +23,7 @@
     display: block;
     @include mt_vw($s12);
 
+
     &--pc {
       & > img {
         width: 100%;

@@ -13,5 +13,9 @@
     color: $gray;
     line-height: 2;
     font-family: $yuGothic;
+
+    &:not(:last-child) {
+      @include pb_vw(20);
+    }
   }
 }

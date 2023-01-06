@@ -73,6 +73,7 @@
 
   <link rel="stylesheet"
     href="<?php echo get_template_directory_uri(); ?>/dist/assets/css/style.css?ver=<?php echo $version ?>">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/assets/sass/style.css?ver=<?php echo $version ?>">
 
   <?php wp_head(); ?>
 
@@ -107,10 +108,21 @@
         </svg>
       </a>
 
+      <?php
+      if (is_front_page()) {
+        $hambugerBarColor = "black";
+      } else {
+        $hambugerBarColor = "white";
+      }
+      ?>
+
       <button class="header__hamburger hamburger drawer-toggle" aria-label="ドロワーメニューを開くボタン">
-        <span class="hamburger__bar hamburger__bar--top" style="background: <?php echo $fill ?>"></span>
-        <span class="hamburger__bar hamburger__bar--middle" style="background: <?php echo $fill ?>"></span>
-        <span class="hamburger__bar hamburger__bar--bottom" style="background: <?php echo $fill ?>"></span>
+        <span class="js-hambuger hamburger__bar hamburger__bar--top"
+          style="background: <?php echo $hambugerBarColor ?>"></span>
+        <span class="js-hambuger hamburger__bar hamburger__bar--middle"
+          style="background: <?php echo $hambugerBarColor ?>"></span>
+        <span class="js-hambuger hamburger__bar hamburger__bar--bottom"
+          style="background: <?php echo $hambugerBarColor ?>"></span>
       </button>
 
     </div>
@@ -127,7 +139,7 @@
 
       <li class="drawerNav__item drawer-menu-item">
         <a class="drawerNav__link" href="<?php echo home_url(); ?>">
-          <span class="drawerNav__text">HOME</span>
+          <span class="drawerNav__text">TOP</span>
           <img class="drawerNav__arrow"
             src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
         </a>
@@ -143,15 +155,7 @@
 
       <li class="drawerNav__item drawer-menu-item">
         <a class="drawerNav__link" href="<?php echo home_url("restaurant"); ?>#headOffice">
-          <span class="drawerNav__text">RESTAURANT</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("real-estate"); ?>#headOffice">
-          <span class="drawerNav__text">REAL ESTATE</span>
+          <span class="drawerNav__text">RESTAURANTS</span>
           <img class="drawerNav__arrow"
             src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
         </a>
@@ -166,6 +170,14 @@
       </li>
 
       <li class="drawerNav__item drawer-menu-item">
+        <a class="drawerNav__link" href="<?php echo home_url("real-estate"); ?>#headOffice">
+          <span class="drawerNav__text">REAL ESTATE</span>
+          <img class="drawerNav__arrow"
+            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
+        </a>
+      </li>
+
+      <li class="drawerNav__item drawer-menu-item">
         <a class="drawerNav__link" href="<?php echo home_url("event"); ?>#headOffice">
           <span class="drawerNav__text">EVENT</span>
           <img class="drawerNav__arrow"
@@ -174,16 +186,24 @@
       </li>
 
       <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("contact"); ?>">
-          <span class="drawerNav__text">CONTACT</span>
+        <a class="drawerNav__link" href="<?php echo home_url("column"); ?>">
+          <span class="drawerNav__text">COLUMN</span>
           <img class="drawerNav__arrow"
             src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
         </a>
       </li>
 
       <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("column"); ?>">
-          <span class="drawerNav__text">COLUMN</span>
+        <a class="drawerNav__link" href="<?php echo home_url("adoption"); ?>">
+          <span class="drawerNav__text">ADOPTION</span>
+          <img class="drawerNav__arrow"
+            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
+        </a>
+      </li>
+
+      <li class="drawerNav__item drawer-menu-item">
+        <a class="drawerNav__link" href="<?php echo home_url("contact"); ?>">
+          <span class="drawerNav__text">CONTACT</span>
           <img class="drawerNav__arrow"
             src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
         </a>

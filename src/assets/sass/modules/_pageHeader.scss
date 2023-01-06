@@ -32,10 +32,15 @@
   }
 
   &__title {
+    @include pb_vw(12);
     @include fz_vw(120, 56);
 
     & > span {
       font-size: inherit;
+    }
+
+    &-long {
+      @include fz_vw(120,46);
     }
   }
 

@@ -14,7 +14,7 @@ Template Name: privacy-policy
 
       <div class="pageHeader__inner">
 
-        <h1 class="pageHeader__title js-textAnimation">
+        <h1 class="pageHeader__title pageHeader__title-long js-textAnimation">
           Privacy&nbsp;Policy
         </h1>
 

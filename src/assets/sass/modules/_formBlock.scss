@@ -41,6 +41,7 @@
       & > textarea {
         display: block;
         width: 100%;
+        @include p_vw(10);
 
         background: $black;
         border: none;

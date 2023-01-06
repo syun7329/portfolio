@@ -10,6 +10,7 @@
   }
 
   &__main {
+    max-width: 900px;
     width: 80%;
     @include py_vw(80, 40);
   }
