@@ -2402,7 +2402,8 @@ a.page-numbers.current {
 .businessList__item {
   position: relative;
   width: 64.375vw;
-  padding-bottom: 4.375vw;
+  padding-top: 2.96875vw;
+  padding-bottom: 2.96875vw;
   padding-right: 10.625vw;
 }
 @media screen and (max-width: 800px) {
@@ -2412,7 +2413,8 @@ a.page-numbers.current {
 }
 @media screen and (max-width: 800px) {
   .businessList__item {
-    padding-bottom: 6.4vw;
+    padding-top: 5.3333333333vw;
+    padding-bottom: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 800px) {
@@ -2426,6 +2428,21 @@ a.page-numbers.current {
     justify-content: space-between;
     width: 100%;
   }
+}
+.businessList__item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  height: 3px;
+  background: #000;
+  transition: all 0.5s ease-in-out;
+}
+.businessList__item:hover::before {
+  width: 100%;
+  left: 0;
 }
 .businessList__item::after {
   display: block;
