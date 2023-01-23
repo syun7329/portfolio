@@ -9,7 +9,7 @@
     position: relative;
     @include w_vw(824);
 
-    @include pb_vw(56, 24);
+    @include py_vw(38, 20);
     @include pr_vw(136, 0);
 
     @include responsive(tab) {
@@ -17,6 +17,24 @@
       justify-content: space-between;
       width: 100%;
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      right: 0;
+      left: auto;
+      bottom: 0;
+      height: 3px;
+      background: $black;
+      transition: all .5s ease-in-out;
+    }
+  
+    &:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
 
     &::after {
       display: block;
