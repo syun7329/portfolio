@@ -155,7 +155,7 @@ Template Name: about-us
         </svg>
 
         <h2 class="company__title js-borderAnimation">
-          <p class="company__titleText company__titleText--en js-textAnimation">COMPANY PROFILE</p>
+          <p class="company__titleText company__titleText--en js-textAnimation">COMPANY&thinsp;PROFILE</p>
           <p class="company__titleText company__titleText--ja js-textAnimation">会社概要</p>
         </h2>
 

@@ -40,7 +40,7 @@
   }
 
   &__button {
-    width: 100vw;
+    width: 100%;
 
     @include h_vw(62, 48);
     @include mt_vw(72, 24);

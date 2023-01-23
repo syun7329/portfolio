@@ -92,6 +92,7 @@
 
         </div>
 
+        <!--
         <div class="footer__sns sns">
 
           <p class="sns__followUs">
@@ -114,6 +115,7 @@
           </div>
 
         </div>
+        -->
 
       </div>
 
@@ -135,6 +137,7 @@
         </g>
 
       </svg>
+
 
       <div class="footer__copyRight">
         © GC Inc. 2022

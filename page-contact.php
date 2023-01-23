@@ -23,7 +23,16 @@ Template Name: contact
 
     <section class="contact">
 
-      <?php echo do_shortcode('[contact-form-7 id="28" title="コンタクトフォーム 1"]') ?>
+      <div class="contact__container">
+        <div class="contact__item">
+          <h2>お問い合わせ</h2>
+          <p>お仕事のご依頼やご相談はこちらからお送りください。<br>後ほど弊社担当者よりご連絡させていただきます。</p>
+        </div>
+        <div class="contact__item">
+          <?php echo do_shortcode('[contact-form-7 id="28" title="コンタクトフォーム 1"]') ?>
+        </div>
+      </div>
+      
 
     </section>
 

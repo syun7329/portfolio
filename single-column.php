@@ -28,9 +28,11 @@
 
     <section class="single__main">
 
+      <!--
       <div class="single__thumbnailWrapper">
         <img class="single__thumbnail" src="<?php echo get_the_post_thumbnail_url(get_the_ID()) ?>">
       </div>
+      -->
 
       <div class="single__content blogBody">
         <?php echo the_content(); ?>

@@ -17,10 +17,13 @@ ul.page-numbers {
 
 span.page-numbers,
 a.page-numbers {
+  position: relative;
+
   width: 32px;
   height: 32px;
 
   border-radius: 50%;
+  border: solid 1px $black;
 
   display: flex;
   align-items: center;
@@ -30,10 +33,39 @@ a.page-numbers {
   font-weight: bold;
   color: $black;
 
-  @include fz_vw(16);
+  overflow: hidden;
+  transition: $transition;
+
+  @include fz_vw(16,13);
+
+  &:hover {
+    border: solid 11px $white;
+    transition: $transition;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background: $black;
+    transform: scale(0);
+    transition: 0.4s all;
+  }
+
+  &:hover::before {
+    transform: scale(3);
+  }
 
   &.current {
     color: $white;
+    background: $black;
   }
 }
 

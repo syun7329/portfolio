@@ -72,16 +72,12 @@
   }
 
   &__button {
-    display: block;
+
 
     width: 100%;
     @include h_vw(62, 48);
 
     @include mt_vw(56, 32);
-
-    @include responsive(tab) {
-      width: 80%;
-    }
 
     & > .marquee {
       height: 100%;
@@ -106,18 +102,6 @@
 
     &:hover {
       filter: grayscale(0);
-    }
-  }
-
-  &__button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @include h_vw(62, 48);
-
-    @include responsive(tab) {
     }
   }
 }

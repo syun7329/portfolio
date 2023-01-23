@@ -58,20 +58,15 @@ class Business extends AbstractLayout
     $viewAllTextHtml = "";
 
     if ($link) {
-
-      for ($i = 0; $i < 100; $i++) {
-        $viewAllTextHtml .=
-          "
-            <p class=\"viewAllButton__text\">
-              VIEW MORE
-            </p>
-          ";
-      }
+      $viewAllTextHtml .= "
+        <p class=\" viewAllButton__text\">詳しくはこちら</p>
+      ";
 
       $html = "
         <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"{$link}\" class=\"restaurant__button viewAllButton\">
           <div class=\"viewAllButton__inner\">
             {$viewAllTextHtml}
+            <div class=\"viewAllButton__arrow\"></div>
           </div>
         </a>
       ";

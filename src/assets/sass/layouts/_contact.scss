@@ -4,6 +4,64 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $black;
+    background: $white;
+    border-radius: 14px;
+    gap: vw(30);
+
+    @include mt_vw(80);
+    @include mx_vw(100,20);
+    @include px_vw(60,20);
+    @include py_vw(60,40);
+  }
+
+  &__item {
+    width: 100%;
+    line-height: 1.6;
+    text-align: center;
+
+    &:first-child {
+      @include mb_vw(16);
+
+      h2 {
+        @include fz_vw(32,24);
+      }
+  
+      p {
+        @include mt_vw(30,10);
+        @include fz_vw(18,12);
+        line-height: 1.6;
+      }
+    }
+
+    .required {
+      p {
+        &::after {
+          content: '必須';
+          @include px_vw(8);
+          @include pt_vw(4);
+          @include pb_vw(2);
+          color: $white;
+          background: $red;
+          border-radius: 10px;
+        }
+      }
+    } 
+
+    &:last-child {
+      p {
+        color: $black;
+      }
+    }
+  }
+  
 
   & > * {
     width: 100%;
@@ -15,7 +73,7 @@
 
   .wpcf7-response-output {
     width: 80%;
-    color: $white;
+    color: $black;
     text-align: center;
     line-height: 2;
 
@@ -35,4 +93,86 @@
       opacity: 0.5;
     }
   }
+}
+
+.formBlock {
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__label {
+    @include pt_vw(20);
+    @include pb_vw(10);
+    @include fz_vw(20,14);
+    @include w_vw(300);
+  }
+
+  &__field {
+    input {
+      @include p_vw(12);
+      @include pl_vw(22);
+      @include mb_vw(6);
+      @include w_vw(550,250);
+      @include h_vw(25,20);
+      color: $black;
+      background: $white;
+      border: solid 1px $black;
+      border-radius: 20px;
+      transition: 0.2s ease-out all;
+
+      &:focus {
+        transform: translate(0,-1px);
+        border: solid 1px $blue;
+        box-shadow: 0px 2px 4px 2px rgba(200,200,200,0.3);
+      }
+    }
+
+    textarea {
+      @include p_vw(12);
+      @include pl_vw(22);
+      @include mb_vw(6);
+      @include w_vw(550,250);
+      @include h_vw(250,150);
+      color: $black;
+      background: $white;
+      border: solid 1px $black;
+      border-radius: 20px;
+      transition: 0.2s ease-out all;
+
+      &:focus {
+        transform: translate(0,-1px);
+        border: solid 1px $blue;
+        box-shadow: 0px 2px 4px 2px rgba(200,200,200,0.3);
+      }
+    }
+  }
+}
+
+.contactForm {
+  br {
+    display: none;
+  }
+
+  &__privacyPolicyLink {
+    color: $black;
+    border-bottom: dashed 1px $blue;
+  }
+
+  &__submit {
+    input {
+      @include mt_vw(-50);
+      @include px_vw(35);
+      @include py_vw(12);
+      @include fz_vw(18);
+      border-radius: 30px;
+      color: $white;
+      background: $blue;
+    }
+  }
+}
+
+form.sent .contact__form{
+  display: none;
 }

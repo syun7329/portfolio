@@ -4,45 +4,82 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex: 1 1 auto;
   position: relative;
-
   overflow: hidden;
+  transition: all .15s ease-out;
 
-  border-radius: 100px;
   color: $black;
   background: $white;
-  border: solid 2px $black;
+  border: none;
+  border-bottom: solid 1px $black;
+  
 
-  transition: $transition;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    height: 1px;
+    background: $black;
+    transition: all .15s ease-out;
+  }
 
   &:hover {
-    color: $white;
-    background: $black;
+    &::after {
+      width: 100%;
+      left: 0;
+    }
   }
 
   &__inner {
+    width: 90%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: vw(24);
-
-    animation: marqueeViewAll 400s linear infinite;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &__text {
     flex-shrink: 0;
-    @include fz_vw(32, 16);
-    font-weight: bold;
+    @include fz_vw(20, 14);
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: normal;
   }
 
-  @keyframes marqueeViewAll {
-    from {
-      transform: translateX(0);
+  &__arrow {
+    display: inline-block;
+    margin-left: auto;
+    vertical-align: middle;
+    color: $black;
+    line-height: 1;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    transform: translateX(-25%) rotate(45deg);
+
+    &::before,&::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      background: currentColor;
+      border-radius: 0.1em;
+      transition: $transition;
     }
-    to {
-      transform: translateX(-300%);
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0.1em;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 0.1em;
     }
   }
 }

@@ -145,11 +145,10 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
 
           <a href="<?php echo home_url("about") ?>" class="about__button viewAllButton">
             <div class="viewAllButton__inner">
-              <?php for ($i = 0; $i < 100; $i++) : ?>
               <p class="viewAllButton__text">
-                VIEW ALL
+                詳しくはこちら
+                <div class="viewAllButton__arrow"></div>
               </p>
-              <?php endfor ?>
             </div>
           </a>
 
@@ -342,11 +341,10 @@ $business_post = $postService->getPostsByPostType(LayoutTypeConst::BUSINESS, Pos
 
         <a href="<?php echo home_url("column") ?>" class="column__button viewAllButton">
           <div class="viewAllButton__inner">
-            <?php for ($i = 0; $i < 100; $i++) : ?>
             <p class="viewAllButton__text">
-              VIEW ALL
+              詳しくはこちら
+              <div class="viewAllButton__arrow"></div>
             </p>
-            <?php endfor ?>
           </div>
         </a>
 
