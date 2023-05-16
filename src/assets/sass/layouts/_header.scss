@@ -11,75 +11,89 @@
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  background: transparent;
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    position: relative;
-
-    width: 90%;
-
-    @include py_vw(24, 16);
-
-    @include responsive(tab) {
-      width: 80%;
-    }
+    width: 100%;
+    background: transparent;
   }
 
-  &__contact {
-    @include px_vw(32);
-    @include py_vw(8);
-
-    @include fz_vw(12);
-
-    color: $black;
-    border-radius: 100px;
-    background: $white;
-    border: 1px solid $black;
-
-    @include responsive(tab) {
-      display: none;
-    }
-  }
-
-  &__logoArea {
-    display: block;
-
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-
-    // position: absolute;
-
-    // display: inline-block;
-  }
-
-  &__logo {
-    position: absolute;
+  &__menu {
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    width: 100px;
+    height: 100%;
+    background: $main;
+    border-right: solid 4px $black;
+  }
 
-    mix-blend-mode: difference;
+  &__menu-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    z-index: 700;
+    svg {
+      width: 80%;
+      transition: 0.2s all ease-out;
 
-    @include w_vw(50);
-
-    @include responsive(tab) {
-      position: static;
+      &:hover {
+        fill: $accent;
+      }
     }
   }
 
-  &__hamburger {
-    @include w_vw(50);
-    @include h_vw(50);
+  &__menu-link {
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $black;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      transition: 0.2s all ease-out;
+
+      &:hover {
+        color: $accent;
+      }
+
+      span {
+        margin-bottom: 2px;
+        display: block;
+        font-size: 56px;
+      }
+    }
+  }
+
+  &__comment {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    width: 100px;
+    height: 100%;
+    background: $main;
+    border-left: solid 4px $black;
+  }
+
+  &__comment-text {
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    writing-mode: vertical-rl;
   }
 }

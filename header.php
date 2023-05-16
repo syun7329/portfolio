@@ -55,25 +55,21 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
 
-  <!-- AOS -->
-  <!-- <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/libs/aos.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-
-  <!-- gsap -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
-
-  <!-- sticksy -->
-  <script defer src="https://cdn.jsdelivr.net/npm/sticksy/dist/sticksy.min.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/jquery.scrollify.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/jquery.easing.js"></script>
   <!--======================================== Liburaries ========================================-->
 
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/app.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/scrollify-admin.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/flying.js"></script>
 
   <link rel="stylesheet"
     href="<?php echo get_template_directory_uri(); ?>/dist/assets/css/style.css?ver=<?php echo $version ?>">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/assets/sass/style.css?ver=<?php echo $version ?>">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/assets/sass/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <?php wp_head(); ?>
 
@@ -88,47 +84,52 @@
 
     <div class="header__inner">
 
-      <a href="<?php echo home_url('contact') ?>" class="header__contact">CONTACT</a>
+      <nav class="header__menu">
 
-      <a href="<?php echo home_url() ?>" class="header__logoArea js-header__logoArea">
-        <svg class="header__logo js-header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 34.32">
-          <defs>
-            <style>
-              .cls-1 {
-               fill: none;
-              }
-
-              .cls-2 {
-                fill: #172a88;
-              }
-            </style>
-          </defs>
-          <g id="_グループ_2657" data-name="グループ 2657">
-            <g id="_パス_12" data-name="パス 12">
-              <path class="cls-1" d="m45.34,21c-2.1,6.5-9.2,10.1-15.7,7.9-6.5-2.1-10.1-9.2-7.9-15.7,2.1-6.5,9.2-10.1,15.7-7.9,3.8,1.2,6.7,4.2,7.9,7.9h4.8C48.04,4,38.84-1.7,29.64.5c-9.2,2.1-14.9,11.3-12.7,20.5s11.3,14.9,20.5,12.7c6.3-1.5,11.2-6.4,12.7-12.7h-4.8Z"/>
-              <path class="cls-2" d="m33.54,33.7c1.9,0,3.8-.3,5.6-1,1.7-.6,3.3-1.5,4.8-2.7,2.7-2.2,4.7-5.2,5.6-8.5h-3.8c-.9,2.4-2.4,4.5-4.5,6-2.2,1.6-4.9,2.5-7.7,2.5-3.5,0-6.7-1.3-9.2-3.8-2.4-2.4-3.8-5.7-3.8-9.2s1.3-6.7,3.8-9.2c2.4-2.4,5.7-3.8,9.2-3.8,2.8,0,5.4.9,7.7,2.5,2.1,1.5,3.6,3.6,4.5,6h3.8c-.9-3.3-2.9-6.3-5.6-8.5-1.4-1.2-3-2.1-4.8-2.7s-3.7-1-5.6-1c-4.4,0-8.6,1.7-11.7,4.8-3.1,3.1-4.8,7.3-4.8,11.7s1.7,8.6,4.8,11.7,7.3,5.2,11.7,5.2m0,.5c-9.4,0-17.1-7.6-17.1-17.1S24.04,0,33.54,0c8.1,0,14.8,5.6,16.6,13.2h-4.8c-1.6-5-6.3-8.6-11.8-8.6-6.9,0-12.4,5.6-12.4,12.4s5.6,12.4,12.4,12.4c5.5,0,10.2-3.6,11.8-8.6h4.8c-1.7,7.7-8.5,13.4-16.6,13.4Z"/>
+        <a class="header__menu-logo" href="">
+          <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 139.9 139.9" style="enable-background:new 0 0 139.9 139.9;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M69.9,10c28.8,0,52.2,23.4,52.2,52.2s-23.4,52.2-52.2,52.2S17.7,91,17.7,62.2S41.1,10,69.9,10 M69.9,0
+                  C35.6,0,7.7,27.9,7.7,62.2s27.9,62.2,62.2,62.2c34.4,0,62.2-27.9,62.2-62.2S104.3,0,69.9,0L69.9,0z"/>
+              </g>
+              <g>
+                <rect x="26" y="49.7" width="87.9" height="25"/>
+              </g>
+              <g>
+                <rect x="57.4" y="18.3" width="25" height="87.9"/>
+              </g>
+              <g>
+                <rect x="57.4" y="119.2" width="25" height="20.7"/>
+              </g>
             </g>
-            <path id="_合体_1" data-name="合体 1" class="cls-2" d="m0,17.17C0,7.76,7.6.17,17.1.17c7.9,0,14.8,5.5,16.6,13.2h-4.8c-2.1-6.5-9.2-10.1-15.7-7.9-6.5,2.1-10.1,9.2-7.9,15.7s9.2,10.1,15.7,7.9c.1,0,.2-.1.2-.1,1.2,1.3,2.6,2.3,4.1,3.2-8.2,4.6-18.6,1.6-23.2-6.7-1.3-2.6-2.1-5.5-2.1-8.3Zm25.3,9.3c1.7-1.5,2.9-3.4,3.6-5.5h-7.2c-.5-1.5-.7-3.2-.6-4.8h13c0,.8,0,1.6-.1,2.4v.4c-.1.6-.2,1.2-.3,1.9v.1h0c-.1.3-.2.7-.3,1-.8,2.6-2.1,4.9-4,6.9-1.5-.5-2.9-1.4-4.1-2.4h0Z"/>
-          </g>
-        </svg>
-      </a>
+          </svg>
+        </a>
 
-      <?php
-      if (is_front_page()) {
-        $hambugerBarColor = "black";
-      } else {
-        $hambugerBarColor = "white";
-      }
-      ?>
+        <div class="header__menu-link">
 
-      <button class="header__hamburger hamburger drawer-toggle" aria-label="ドロワーメニューを開くボタン">
-        <span class="js-hambuger hamburger__bar hamburger__bar--top"
-          style="background: <?php echo $hambugerBarColor ?>"></span>
-        <span class="js-hambuger hamburger__bar hamburger__bar--middle"
-          style="background: <?php echo $hambugerBarColor ?>"></span>
-        <span class="js-hambuger hamburger__bar hamburger__bar--bottom"
-          style="background: <?php echo $hambugerBarColor ?>"></span>
-      </button>
+          <a href="">
+            <span>A</span>ABOUT
+          </a>
+          <a href="">
+            <span>W</span>WORKS
+          </a>
+          <a href="">
+            <span>C</span>CONTACT
+          </a>
+
+        </div>
+
+        <div></div>
+
+      </nav>
+
+      <div class="header__comment">
+
+        <p class="header__comment-text">ポートフォリオサイトへようこそ！</p>
+
+      </div>
 
     </div>
 
@@ -215,27 +216,6 @@
       </li>
 
     </ul>
-
-
-    <!-- <div class="drawerNav__buttons">
-
-      <a href="<? echo home_url('contact'); ?>" class="button button--drawerNav c:green bg:white" target="_blank"
-        rel="noopener noreferrer">
-        <div class="button__contents">
-          <div class="button__text">法人の方は<span class="indentWord">こちら</span></div>
-        </div>
-      </a>
-
-      <a href="<? echo home_url('contact'); ?>" class="button button--drawerNav c:white bg:green" target="_blank"
-        rel="noopener noreferrer">
-        <div class="button__contents">
-          <div class="button__text">お問い合わせは<span class="indentWord">こちら</span></div>
-        </div>
-      </a>
-
-    </div> -->
-
-    <small class="drawerNav__copyRight">Copyright GC Co., Ltd All rights reserved.</small>
 
   </nav>
 

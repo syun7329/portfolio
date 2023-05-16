@@ -96,10 +96,10 @@ body * {
 body {
   display: flex;
   flex-flow: column;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  width: calc(100vw - 208px);
+  margin: 0 auto;
 
-  font-family: $didot, $ryumin;
+  font-family: $anton;
 }
 
 main {

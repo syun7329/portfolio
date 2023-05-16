@@ -9,31 +9,6 @@ global $IMG_DIR;
 $TMP_DIR = get_template_directory_uri();
 $IMG_DIR = $TMP_DIR . "/dist/assets/images/";
 
-require_once(__DIR__ . '/functions/post_type_column.php');
-require_once(__DIR__ . '/functions/post_type_adoption.php');
-require_once(__DIR__ . '/functions/post_type_business.php');
-
-require_once(__DIR__ . '/includes/components/Pagination.php');
-
-require_once(__DIR__ . '/includes/constants/LayoutTypeConst.php');
-require_once(__DIR__ . '/includes/constants/PostTypeConst.php');
-require_once(__DIR__ . '/includes/constants/TaxonomySlugConst.php');
-
-require_once(__DIR__ . '/includes/factories/LayoutFactory.php');
-
-require_once(__DIR__ . '/includes/layouts/AbstractLayout.php');
-require_once(__DIR__ . '/includes/layouts/Business.php');
-require_once(__DIR__ . '/includes/layouts/Adoption.php');
-require_once(__DIR__ . '/includes/layouts/ColumnFrontPage.php');
-require_once(__DIR__ . '/includes/layouts/ColumnArchive.php');
-
-require_once(__DIR__ . '/includes/services/PostService.php');
-require_once(__DIR__ . '/includes/services/TaxonomyService.php');
-
-require_once(__DIR__ . '/includes/utils/PostUtils.php');
-require_once(__DIR__ . '/includes/utils/ImageUtils.php');
-require_once(__DIR__ . '/includes/utils/PostArrayUtils.php');
-
 
 
 // ===============================================================================

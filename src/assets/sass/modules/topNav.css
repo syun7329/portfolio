@@ -214,8 +214,6 @@
 .blogBody hr {
   display: block;
   overflow: hidden;
-  unicode-bidi: -webkit-isolate;
-  unicode-bidi: -moz-isolate;
   unicode-bidi: isolate;
   -webkit-margin-before: 0.5em;
           margin-block-start: 0.5em;
@@ -510,7 +508,6 @@
           padding-inline-end: 0.75em;
   -webkit-padding-after: 0.625em;
           padding-block-end: 0.625em;
-  min-inline-size: -webkit-min-content;
   min-inline-size: -moz-min-content;
   min-inline-size: min-content;
 }
@@ -1245,10 +1242,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
@@ -1265,14 +1260,6 @@
   /* 6px + 2em = border + padding, as by default box-sizing is content-box. */
   max-width: calc(100% - 6px - 2em);
   max-height: calc(100% - 6px - 2em);
-}
-.blogBody dialog::-webkit-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.1);
 }
 .blogBody dialog::backdrop {
   position: fixed;
@@ -1435,7 +1422,7 @@
 .topNav__link {
   display: block;
   font-family: "Futura";
-  color: #000;
+  color: #222;
   transition: 0.5s all;
   padding: 0.625vw;
 }

@@ -4,53 +4,218 @@
   position: relative;
   overflow: hidden;
 
-  &__inner {
-    @include pt_vw($s17);
+  &__firstview {
+    background-image: url(../../../dist/assets/images/fv_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
-  &__marquee {
-    display: flex;
-    position: relative;
+  &__firstview-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include fz_vw(110);
+    letter-spacing: 0.6rem;
+    color: $main;
+    text-shadow: -0.4rem 0.4rem $black;
+    z-index: 100;
+    animation: doki-doki 1s ease infinite;
 
-    @include h_vw(79, 40);
-  }
-
-  &__nav {
-    @include mt_vw($s7, $s3);
-  }
-
-  &__img {
-    display: block;
-    @include mt_vw($s12);
-
-
-    &--pc {
-      & > img {
-        width: 100%;
+    @keyframes doki-doki {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
       }
 
-      @include responsive(tab) {
-        display: none;
+      20% {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
       }
     }
+  }
 
-    &--sp {
-      display: none;
+  &__firstview-scroll {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
 
-      & > img {
-        width: 100%;
-      }
+    p {
+      font-size: 18px;
+      text-align: center;
+      color: $main;
+      text-shadow: -2px 2px $black;
+    }
 
-      @include responsive(tab) {
+    div {
+      width: 40px;
+      height: 70px;
+      border-radius: 20px;
+      border: 4px solid $main;
+      background-color: white;
+      box-shadow: -2px 2px $black;
+      margin: 0 auto;
+      margin-top: 6px;
+  
+      &:before {
+        content: '';
         display: block;
-        width: 100%;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        top: 50%;
+        left: calc(50% - 6px);
+        transform: translate(-50%, -50%);
+        background: $main;
+        box-shadow: -2px 2px $black;
+        animation: m-1-ball 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       }
+
+      @keyframes m-1-ball {
+        0%, 65%, 100% {
+          opacity: 0;
+        }
+        10%, 40% {
+          opacity: 1;
+        }
+        0% {
+          transform: translateY(5px) scale(.7);
+        }
+        5% {
+          transform: scale(.7);
+        }
+        15%, 100% {
+          transform: scale(1);
+        }
+        45%, 65% {
+          transform: translateY(24px) scale(.7);
+        }
+      }
+
     }
   }
 
-  &__scrollNavigator {
+  &__firstview-copyright {
+    position: absolute;
+    top: 1%;
+    right: calc(1% + 100px);
+    @include fz_vw(18);
+    letter-spacing: 1px;
+    color: $main;
+    text-shadow: -2px 2px $black;
+  }
+
+  &__firstview-bird {
+    position: absolute;
+    top: 3%;
+    left: calc(4% + 100px);
+    @include w_vw(170);
+  }
+
+  &__firstview-penguin {
+    position: absolute;
+    bottom: 0;
+    right: calc(4% + 100px);
+    margin-bottom: -4px;
+    @include w_vw(170);
+    transition: 1s;
+
+    &:active {
+      transform: translateY(-40%);
+    }
+  }
+
+  &__about {
+    background-color: $main;
+    position: absolute;
+    width: calc(100vw - 200px);
+    margin: 0 auto;
+    z-index: 200;
+  }
+
+  &__about-inner {
+    @include px_vw(50);
+    @include py_vw(40);
+  }
+
+  &__about-title {
+    position: relative;
+    @include fz_vw(56);
+    letter-spacing: 1.5px;
+
+    &::after {
+      content: 'あばうと';
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include fz_vw(26);
+      letter-spacing: 0px;
+    }
+
+    span {
+      @include fz_vw(96);
+      @include mr_vw(1);
+      @include mb_vw(-1);
+    }
+  }
+
+  &__about-article {
+    @include mt_vw(40);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+  }
+
+  &__about-article-left {
     display: flex;
-    justify-content: center;
-    @include py_vw(24);
+    flex-direction: column;
+    gap: 3rem;
+
+    p {
+      @include fz_vw(18);
+      line-height: 2;
+    }
+  }
+
+  &__about-maru {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include w_vw(450);
+    z-index: -10;
+  }
+}
+
+[class|="confetti"] {
+  position: absolute;
+}
+
+$colors: (#d13447, #ffbf00, #263672);
+
+@for $i from 0 through 150 {
+  $w: random(16);
+  $l: random(100);
+  .confetti-#{$i} {
+    width: #{$w}px;
+    height: #{$w*1.7}px;
+    background-color: nth($colors, random(3));
+    top: -10%;
+    left: unquote($l+"%");
+    opacity: random() + 0.5;
+    transform: rotate(#{random()*360}deg);
+    animation: drop-#{$i} unquote(4.5+random()+"s") unquote(random()+"s") infinite;
+  }
+
+  @keyframes drop-#{$i} {
+    100% {
+      top: 110%;
+      left: unquote($l+random(15)+"%");
+    }
   }
 }
