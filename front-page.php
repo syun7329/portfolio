@@ -5,7 +5,7 @@
 
   <div class="main__inner">
 
-    <section class="top__firstview section" data-section-name="firstview">
+    <section class="top__firstview section" id="firstview" data-section-name="firstview">
 
       <div class="confetti-149"></div>
       <div class="confetti-148"></div>
@@ -366,21 +366,100 @@
 
           <div class="top__about-article-right">
 
-            <div class="top__about-img">
-              <img src="" alt="">
-            </div>
+            <div class="top__about-img-area">
+              <div class="top__about-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about_img1.jpg" alt="">
+              </div>
 
-            <div class="top__about-img">
-              <img src="" alt="">
+              <div class="top__about-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about_img2.jpg" alt="">
+              </div>
+
+              <div class="top__about-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about_img3.jpg" alt="">
+              </div>
             </div>
 
           </div>
 
         </div>
 
-        <button></button>
+        <a class="top__about-button" href="">もっとみる</a>
 
       </div>
+
+    </section>
+
+    <section class="top__works section" id="works" data-section-name="works">
+
+      <div class="top__works-inner">
+
+        <h2 class="top__works-title"><span>W</span>ORKS</h2>
+
+        <div class="top__works-article">
+
+          <a class="top__works-item" href="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_chaochao.png" alt="">
+            <div class="top__works-item-tag">
+              <span>web&nbsp;design</span>
+              <span>coding</span>
+              <span>illustration</span>
+            </div>
+          </a>
+
+          <a class="top__works-item" href="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_senryobako.png" alt="">
+            <div class="top__works-item-tag">
+              <span>web&nbsp;design</span>
+              <span>coding</span>
+              <span>illustration</span>
+            </div>
+          </a>
+
+          <a class="top__works-item" href="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_hona.png" alt="">
+            <div class="top__works-item-tag">
+              <span>graphic&nbsp;design</span>
+              <span>DTP</span>
+              <span>illustration</span>
+            </div>
+          </a>
+
+          <a class="top__works-item" href="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_lemohoru.png" alt="">
+            <div class="top__works-item-tag">
+              <span>graphic&nbsp;design</span>
+              <span>DTP</span>
+            </div>
+          </a>
+
+          <a class="top__works-item" href="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_yocchan.png" alt="">
+            <div class="top__works-item-tag">
+              <span>graphic&nbsp;design</span>
+              <span>logo</span>
+            </div>
+          </a>
+
+          <a class="top__works-item" href="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_ogata.png" alt="">
+            <div class="top__works-item-tag">
+              <span>graphic&nbsp;design</span>
+              <span>DTP</span>
+            </div>
+          </a>
+
+        </div>
+
+        <a class="top__works-button" href="">もっとみる</a>
+
+      </div>
+
+    </section>
+
+    <section class="top__contact section" id="contact" data-section-name="contact">
+
+      <p>あいうえお</p>
 
     </section>
 

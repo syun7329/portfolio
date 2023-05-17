@@ -57,11 +57,13 @@
 
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/jquery.scrollify.js"></script>
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/jquery.easing.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/jquery.inview.min.js"></script>
   <!--======================================== Liburaries ========================================-->
 
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/app.js"></script>
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/scrollify-admin.js"></script>
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/flying.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/comment.js"></script>
 
   <link rel="stylesheet"
     href="<?php echo get_template_directory_uri(); ?>/dist/assets/css/style.css?ver=<?php echo $version ?>">
@@ -127,7 +129,7 @@
 
       <div class="header__comment">
 
-        <p class="header__comment-text">ポートフォリオサイトへようこそ！</p>
+        <p class="header__comment-text"></p>
 
       </div>
 

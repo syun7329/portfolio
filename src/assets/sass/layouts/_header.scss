@@ -30,6 +30,7 @@
     height: 100%;
     background: $main;
     border-right: solid 4px $black;
+    z-index: 10000;
   }
 
   &__menu-logo {
@@ -88,6 +89,7 @@
     height: 100%;
     background: $main;
     border-left: solid 4px $black;
+    z-index: 10000;
   }
 
   &__comment-text {
@@ -95,5 +97,21 @@
     letter-spacing: 1.5px;
     font-weight: 600;
     writing-mode: vertical-rl;
+
+    &::before {
+      content: '';
+    }
+  }
+
+  &__comment-firstview::before {
+    content: 'ポートフォリオサイトへようこそ！';
+  }
+
+  &__comment-about::before {
+    content: 'ぼくについての大まかなプロフィールです';
+  }
+
+  &__comment-works::before {
+    content: '今までに仕事や勉強で作ったものです';
   }
 }
