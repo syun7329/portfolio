@@ -9,6 +9,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include responsive(tab) {
+      height: 100vh;
+    }
   }
 
   &__firstview-title {
@@ -34,6 +38,10 @@
       100% {
         transform: translate(-50%, -50%) scale(1);
       }
+    }
+
+    @include responsive(tab) {
+      @include fz_vw(42);
     }
   }
 
@@ -108,6 +116,11 @@
     letter-spacing: 1px;
     color: $main;
     text-shadow: -2px 2px $black;
+
+    @include responsive(tab) {
+      right: 2%;
+      @include fz_vw(12);
+    }
   }
 
   &__firstview-bird {
@@ -115,6 +128,11 @@
     top: 3%;
     left: calc(4% + 100px);
     @include w_vw(170);
+
+    @include responsive(tab) {
+      left: 4%;
+      @include w_vw(100);
+    }
   }
 
   &__firstview-penguin {
@@ -123,10 +141,10 @@
     right: calc(4% + 100px);
     margin-bottom: -4px;
     @include w_vw(170);
-    transition: 1s;
 
-    &:active {
-      transform: translateY(-40%);
+    @include responsive(tab) {
+      right: 4%;
+      @include w_vw(100);
     }
   }
 
@@ -136,17 +154,30 @@
     width: calc(100vw - 200px);
     margin: 0 auto;
     z-index: 200;
+
+    @include responsive(tab) {
+      width: 100vw;
+      margin: 0;
+    }
   }
 
-  &__about-inner, &__works-inner {
+  &__about-inner, &__works-inner, &__contact-inner {
     @include px_vw(50);
     @include py_vw(40);
+
+    @include responsive(tab) {
+      @include p_vw(20);
+    }
   }
 
   &__about-title {
     position: relative;
     @include fz_vw(56);
     letter-spacing: 1.5px;
+
+    @include responsive(tab) {
+      @include fz_vw(40);
+    }
 
     &::after {
       content: 'あばうと';
@@ -155,12 +186,20 @@
       right: 0;
       @include fz_vw(26);
       letter-spacing: 0px;
+
+      @include responsive(tab) {
+        @include fz_vw(18);
+      }
     }
 
     span {
       @include fz_vw(96);
       @include mr_vw(1);
       @include mb_vw(-1);
+
+      @include responsive(tab) {
+        @include fz_vw(70);
+      }
     }
   }
 
@@ -171,6 +210,15 @@
     gap: 4rem;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
+
+    @include responsive(pc) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+
+    @include responsive(tab) {
+      @include mt_vw(20);
+    }
   }
 
   &__about-article-left {
@@ -181,6 +229,10 @@
     p {
       @include fz_vw(18);
       line-height: 2;
+
+      @include responsive(tab) {
+        @include fz_vw(14);
+      }
     }
   }
 
@@ -198,6 +250,10 @@
       50% {transform: translate(0px, 4px) rotateZ(0deg)}
       75% {transform: translate(4px, 0px) rotateZ(-2deg)}
       100% {transform: translate(0px, 0px) rotateZ(0deg)}
+    }
+
+    @include responsive(pc) {
+      z-index: 220;
     }
   }
 
@@ -293,13 +349,27 @@
     row-gap: 5rem;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
+
+    @include responsive(pc) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      column-gap: 2rem;
+      row-gap: 2rem;
+    }
   }
 
   &__works-item {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     overflow: hidden;
+
+    @include responsive(pc) {
+      @include h_vw(280);
+    }
 
     &:hover img {
       transform: scale(1.12);
@@ -330,12 +400,226 @@
     }
   }
 
+  &__works-item-modal-top {
+    @include pb_vw(16);
+  }
+
+  &__works-item-modal-title {
+    @include fz_vw(22);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__works-item-modal-link {
+    @include pt_vw(4);
+    text-align: center;
+
+
+    a {
+      @include fz_vw(12);
+      font-weight: 600;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #274765;
+    }
+  }
+
+  &__works-item-modal-img {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+
   &__contact {
     background-color: $main;
     position: relative;
     width: calc(100vw - 200px);
     margin: 0 auto;
     z-index: 200;
+  }
+
+  &__contact-title {
+    position: relative;
+    @include fz_vw(56);
+    letter-spacing: 1.5px;
+
+    &::after {
+      content: 'こんたくと';
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include fz_vw(26);
+      letter-spacing: 0px;
+    }
+
+    span {
+      @include fz_vw(96);
+      @include mr_vw(1);
+      @include mb_vw(-1);
+    }
+  }
+
+  &__contact-article {
+    @include mt_vw(50);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+
+    @include responsive(pc) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+  }
+
+  &__contact-article-left {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      @include fz_vw(18);
+      line-height: 2;
+    }
+  }
+
+  &__contact-article-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__contact-form {
+    position: relative;
+    @include px_vw(50);
+    @include py_vw(24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: solid 2px $black;
+    border-radius: 50px;
+    width: fit-content;
+    background: white;
+
+    @include responsive(pc) {
+      @include py_vw(40);
+      @include w_vw(560);
+    }
+
+    @include responsive(tab) {
+      @include px_vw(20);
+      @include mx_vw(10);
+      width: auto;
+
+      @media (orientation: landscape) {
+        @include mx_vw(30);
+      }
+    }
+  }
+
+  &__contact-form-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include mb_vw(6);
+
+    @include responsive(pc) {
+      @include fz_vw(20);
+    }
+
+    @include responsive(tab) {
+      @include fz_vw(16);
+
+      @media (orientation: landscape) {
+        @include fz_vw(14);
+      }
+    }
+
+    span {
+      @include ml_vw(3);
+      @include px_vw(6);
+      @include py_vw(4);
+      @include fz_vw(15);
+      border-radius: 10px;
+      color: white;
+      background: rgb(199 0 0);
+
+      @include responsive(pc) {
+        @include fz_vw(17);
+      }
+
+      @include responsive(tab) {
+        @media (orientation: landscape) {
+          @include fz_vw(12);
+        }
+      }
+    }
+  }
+
+  &__contact-form-text {
+    @include mb_vw(12);
+
+    input {
+      @include mb_vw(4);
+      @include w_vw(400);
+      @include h_vw(28);
+      background: $main;
+
+      @include responsive(pc) {
+        @include w_vw(550);
+      }
+
+      @include responsive(tab) {
+        width: 81vw;
+
+        @media (orientation: landscape) {
+          width: 72vw;
+        }
+      }
+    }
+
+  }
+
+  &__contact-form-textarea {
+    textarea {
+      @include mb_vw(4);
+      resize: none;
+      @include w_vw(400);
+      @include h_vw(180);
+      border: none;
+      background: $main;
+
+      @include responsive(pc) {
+        @include w_vw(550);
+        @include h_vw(220);
+      }
+
+      @include responsive(tab) {
+        width: 81vw;
+
+        @media (orientation: landscape) {
+          width: 72vw;
+        }
+      }
+    }
+  }
+
+  &__contact-form-button {
+    @include mt_vw(24);
+    text-align: center;
+
+    input {
+      @include px_vw(50);
+      @include py_vw(10);
+      @include fz_vw(20);
+      font-weight: 600;
+      color: $main;
+      background: $black;
+      cursor: pointer;
+    }
   }
 }
 
@@ -365,4 +649,52 @@ $colors: (#d13447, #ffbf00, #263672);
       left: unquote($l+random(15)+"%");
     }
   }
+}
+
+/*全て共通：hideエリアをはじめは非表示*/
+.hide-area {
+	display: none;
+}
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
+
+.wpcf7-not-valid-tip {
+  box-sizing: border-box;
+  color: red !important;
+  display: block;
+  font-size: 14px !important;
+  font-weight: bold;
+  position: absolute;
+  width: fit-content;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {/* 送信ボタン下完了時 */
+  position: absolute;
+  @include px_vw(2);
+  @include py_vw(6);
+  @include w_vw(350);
+  top: -11%;
+  left: 47%;
+  transform: translateX(-50%);
+  border: none;
+  background: rgb(199 0 0);
+  color: white;
+  white-space: nowrap;
+  border-radius: 16px;
+  text-align: center;
+}
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {/* 送信ボタン下未入力警告 */
+  display: none;
 }

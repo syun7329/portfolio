@@ -98,8 +98,12 @@ body {
   flex-flow: column;
   width: calc(100vw - 208px);
   margin: 0 auto;
-
   font-family: $anton;
+
+  @include responsive(tab) {
+    width: 100vw;
+    overflow-x: hidden;
+  }
 }
 
 main {

@@ -340,6 +340,7 @@
     </section>
 
 
+    <div id="all-body">
     <section class="top__about section" id="about" data-section-name="about">
 
       <div class="top__about-inner">
@@ -398,7 +399,7 @@
 
         <div class="top__works-article">
 
-          <a class="top__works-item" href="">
+          <a class="info top__works-item" href="#info-1">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_chaochao.png" alt="">
             <div class="top__works-item-tag">
               <span>web&nbsp;design</span>
@@ -406,8 +407,20 @@
               <span>illustration</span>
             </div>
           </a>
+          <div id="info-1" class="hide-area top__works-item-modal">
+            <div class="top__works-item-modal-top">
+              <h3 class="top__works-item-modal-title">株式会社チャオチャオ餃子</h3>
+              <div class="top__works-item-modal-link">
+                <a href="https://chaochaogyoza.jp/">https://chaochaogyoza.jp/</a>
+              </div>
+            </div>
+            <div class="top__works-item-modal-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/chaochao_pc.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/chaochao_sp.png" alt="">
+            </div>
+          </div>
 
-          <a class="top__works-item" href="">
+          <a class="info top__works-item" href="#info-2">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_senryobako.png" alt="">
             <div class="top__works-item-tag">
               <span>web&nbsp;design</span>
@@ -415,8 +428,20 @@
               <span>illustration</span>
             </div>
           </a>
+          <div id="info-2" class="hide-area top__works-item-modal">
+            <div class="top__works-item-modal-top">
+              <h3 class="top__works-item-modal-title">出前寿司&nbsp;千両箱</h3>
+              <div class="top__works-item-modal-link">
+                <a href="https://demae-sushi.jp/">https://demae-sushi.jp/</a>
+              </div>
+            </div>
+            <div class="top__works-item-modal-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/senryobako_pc.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/senryobako_sp.png" alt="">
+            </div>
+          </div>
 
-          <a class="top__works-item" href="">
+          <a class="info top__works-item" href="#info-3">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_hona.png" alt="">
             <div class="top__works-item-tag">
               <span>graphic&nbsp;design</span>
@@ -424,30 +449,66 @@
               <span>illustration</span>
             </div>
           </a>
+          <div id="info-3" class="hide-area top__works-item-modal">
+            <div class="top__works-item-modal-top">
+              <h3 class="top__works-item-modal-title">立ち呑みおばんざい&nbsp;ほな</h3>
+            </div>
+            <div class="top__works-item-modal-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/hona_logo.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/hona_menu.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/hona_poster.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/hona_pop.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/hona_sticker.png" alt="">
+            </div>
+          </div>
 
-          <a class="top__works-item" href="">
+          <a class="info top__works-item" href="#info-4">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_lemohoru.png" alt="">
             <div class="top__works-item-tag">
               <span>graphic&nbsp;design</span>
               <span>DTP</span>
             </div>
           </a>
+          <div id="info-4" class="hide-area top__works-item-modal">
+            <div class="top__works-item-modal-top">
+              <h3 class="top__works-item-modal-title">レモホル酒場&nbsp;キャンペーンポスター</h3>
+            </div>
+            <div class="top__works-item-modal-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/lemohoru_poster.png" alt="">
+            </div>
+          </div>
 
-          <a class="top__works-item" href="">
+          <a class="info top__works-item" href="#info-5">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_yocchan.png" alt="">
             <div class="top__works-item-tag">
               <span>graphic&nbsp;design</span>
               <span>logo</span>
             </div>
           </a>
+          <div id="info-5" class="hide-area top__works-item-modal">
+            <div class="top__works-item-modal-top">
+              <h3 class="top__works-item-modal-title">浪速たこ焼き&nbsp;よっちゃん&nbsp;ロゴデザイン案</h3>
+            </div>
+            <div class="top__works-item-modal-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/yocchan_logo.png" alt="">
+            </div>
+          </div>
 
-          <a class="top__works-item" href="">
+          <a class="info top__works-item" href="#info-6">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/thumb_ogata.png" alt="">
             <div class="top__works-item-tag">
               <span>graphic&nbsp;design</span>
               <span>DTP</span>
             </div>
           </a>
+          <div id="info-6" class="hide-area top__works-item-modal">
+            <div class="top__works-item-modal-top">
+              <h3 class="top__works-item-modal-title">精肉のおがた&nbsp;キャンペーンポスター</h3>
+            </div>
+            <div class="top__works-item-modal-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/ogata_poster.png" alt="">
+            </div>
+          </div>
 
         </div>
 
@@ -459,9 +520,37 @@
 
     <section class="top__contact section" id="contact" data-section-name="contact">
 
-      <p>あいうえお</p>
+      <div class="top__contact-inner">
+
+        <h2 class="top__contact-title"><span>C</span>ONTACT</h2>
+
+        <div class="top__contact-article">
+
+          <div class="top__contact-article-left">
+
+            <p>
+              お仕事やご相談に関してのご連絡は、こちらのフォームからお願いします。<br>
+              内容を確認次第、こちらからご連絡させていただきます。
+            </p>
+
+          </div>
+
+          <div class="top__contact-article-right">
+
+            <div class="top__contact-form">
+
+              <?php echo do_shortcode('[contact-form-7 id="8" title="Contact form"]'); ?>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </section>
+    </div>
 
   </div>
 

@@ -65,6 +65,10 @@
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/flying.js"></script>
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/comment.js"></script>
 
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/assets/sass/modaal.min.css">
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/modaal.min.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/modal.js"></script>
+
   <link rel="stylesheet"
     href="<?php echo get_template_directory_uri(); ?>/dist/assets/css/style.css?ver=<?php echo $version ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/assets/sass/style.css">
@@ -111,13 +115,13 @@
 
         <div class="header__menu-link">
 
-          <a href="">
+          <a href="#">
             <span>A</span>ABOUT
           </a>
-          <a href="">
+          <a href="#">
             <span>W</span>WORKS
           </a>
-          <a href="">
+          <a href="#contact">
             <span>C</span>CONTACT
           </a>
 
@@ -136,91 +140,7 @@
     </div>
 
   </header>
-  <!--============================================= header-pc =============================================-->
 
 
-  <!--============================================= hamberger-sp =============================================-->
-  <!-- open時 -->
-  <nav class="drawerNav drawer-nav drawer-close" role="navigation">
-
-    <ul class="drawerNav__list drawer-menu">
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url(); ?>">
-          <span class="drawerNav__text">TOP</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("about-us"); ?>#agency">
-          <span class="drawerNav__text">ABOUT US</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("restaurant"); ?>#headOffice">
-          <span class="drawerNav__text">RESTAURANTS</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("mail-order"); ?>#headOffice">
-          <span class="drawerNav__text">MAIL ORDER</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("real-estate"); ?>#headOffice">
-          <span class="drawerNav__text">REAL ESTATE</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("event"); ?>#headOffice">
-          <span class="drawerNav__text">EVENT</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("column"); ?>">
-          <span class="drawerNav__text">COLUMN</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("adoption"); ?>">
-          <span class="drawerNav__text">ADOPTION</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-      <li class="drawerNav__item drawer-menu-item">
-        <a class="drawerNav__link" href="<?php echo home_url("contact"); ?>">
-          <span class="drawerNav__text">CONTACT</span>
-          <img class="drawerNav__arrow"
-            src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/circle-arrow.svg" alt="矢印">
-        </a>
-      </li>
-
-    </ul>
-
-  </nav>
-
-  <!--============================================= hamberger-sp =============================================-->
-
+  
   <img src="<?= get_template_directory_uri(); ?>/dist/assets/images/common/cursol.svg" alt="" class="mouseCursol">

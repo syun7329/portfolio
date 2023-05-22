@@ -31,6 +31,10 @@
     background: $main;
     border-right: solid 4px $black;
     z-index: 10000;
+
+    @include responsive(tab) {
+      display: none;
+    }
   }
 
   &__menu-logo {
@@ -90,6 +94,10 @@
     background: $main;
     border-left: solid 4px $black;
     z-index: 10000;
+
+    @include responsive(tab) {
+      display: none;
+    }
   }
 
   &__comment-text {
@@ -113,5 +121,9 @@
 
   &__comment-works::before {
     content: '今までに仕事や勉強で作ったものです';
+  }
+
+  &__comment-contact::before {
+    content: 'ご連絡はこちらからお願いします';
   }
 }
