@@ -11,10 +11,10 @@
 
   <!--============================================= favicon =============================================-->
   <!-- pc-->
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon/favicon.ico" id="favicon">
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/images/favicon/favicon.ico" id="favicon">
   <!-- sp-->
   <link rel="apple-touch-icon" sizes="180x180"
-    href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon/apple-touch-icon-180x180.png">
+    href="<?php echo get_template_directory_uri(); ?>/dist/assets/images/favicon/apple-touch-icon-180x180.png">
   <!--============================================= favicon =============================================-->
 
 
@@ -64,6 +64,7 @@
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/scrollify-admin.js"></script>
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/flying.js"></script>
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/comment.js"></script>
+  <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/smoothscroll.js"></script>
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/assets/sass/modaal.min.css">
   <script defer src="<?php echo get_template_directory_uri(); ?>/dist/assets/js/modaal.min.js"></script>
@@ -92,7 +93,7 @@
 
       <nav class="header__menu">
 
-        <a class="header__menu-logo" href="">
+        <a class="header__menu-logo" href="<?php echo home_url() ?>">
           <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
             y="0px" viewBox="0 0 139.9 139.9" style="enable-background:new 0 0 139.9 139.9;" xml:space="preserve">
             <g>
@@ -115,10 +116,10 @@
 
         <div class="header__menu-link">
 
-          <a href="#">
+          <a href="#about">
             <span>A</span>ABOUT
           </a>
-          <a href="#">
+          <a href="#works">
             <span>W</span>WORKS
           </a>
           <a href="#contact">
@@ -140,7 +141,3 @@
     </div>
 
   </header>
-
-
-  
-  <img src="<?= get_template_directory_uri(); ?>/dist/assets/images/common/cursol.svg" alt="" class="mouseCursol">

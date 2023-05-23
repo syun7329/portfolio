@@ -11,7 +11,7 @@ $breakpoints: (
   "pc": (
     max-width: 1200px,
   ),
-  "largePc": (
-    max-width: 1500px,
+  "lg": (
+    min-width: 1800px,
   ),
 ) !default;

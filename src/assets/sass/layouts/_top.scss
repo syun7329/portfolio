@@ -12,6 +12,16 @@
 
     @include responsive(tab) {
       height: 100vh;
+      @include mb_vw(-80);
+    }
+  }
+
+  &__firstview-confetti {
+    width: 100%;
+    overflow-x: hidden !important;
+
+    @include responsive(tab) {
+      display: none;
     }
   }
 
@@ -156,8 +166,10 @@
     z-index: 200;
 
     @include responsive(tab) {
+      @include pb_vw(100);
       width: 100vw;
       margin: 0;
+      border-bottom: 25px solid $black;
     }
   }
 
@@ -211,6 +223,10 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
 
+    @include responsive(lg) {
+      @include mt_vw(30);
+    }
+
     @include responsive(pc) {
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
@@ -230,8 +246,12 @@
       @include fz_vw(18);
       line-height: 2;
 
+      @include responsive(lg) {
+        @include fz_vw(15);
+      }
+
       @include responsive(tab) {
-        @include fz_vw(14);
+        @include fz_vw(12);
       }
     }
   }
@@ -241,7 +261,7 @@
     bottom: 0;
     left: -2%;
     @include w_vw(450);
-    z-index: -10;
+    z-index: 220;
     animation: buru-buru .1s  infinite;
 
     @keyframes buru-buru {
@@ -252,8 +272,12 @@
       100% {transform: translate(0px, 0px) rotateZ(0deg)}
     }
 
-    @include responsive(pc) {
-      z-index: 220;
+    @include responsive(lg) {
+      @include w_vw(350);
+    }
+
+    @include responsive(tab) {
+      @include w_vw(170);
     }
   }
 
@@ -272,6 +296,14 @@
   &__about-img {
     @include h_vw(500);
     overflow: hidden;
+
+    @include responsive(lg) {
+      @include h_vw(400);
+    }
+
+    @include responsive(tab) {
+      @include h_vw(200);
+    }
 
     &:hover img {
       &:nth-of-type(1) {
@@ -307,6 +339,14 @@
     background: $black;
     transition: 0.07s all ease-out;
 
+    @include responsive(tab) {
+      bottom: -4%;
+      @include px_vw(30);
+      @include pt_vw(18);
+      @include pb_vw(48);
+      @include fz_vw(24);
+    }
+
     &:hover {
       bottom: 0;
     }
@@ -318,12 +358,23 @@
     width: calc(100vw - 200px);
     margin: 0 auto;
     z-index: 200;
+
+    @include responsive(tab) {
+      @include pb_vw(100);
+      width: 100vw;
+      margin: 0;
+      border-bottom: 25px solid $black;
+    }
   }
 
   &__works-title {
     position: relative;
     @include fz_vw(56);
     letter-spacing: 1.5px;
+
+    @include responsive(tab) {
+      @include fz_vw(40);
+    }
 
     &::after {
       content: 'わーくす';
@@ -332,11 +383,19 @@
       right: 0;
       @include fz_vw(26);
       letter-spacing: 0px;
+
+      @include responsive(tab) {
+        @include fz_vw(18);
+      }
     }
 
     span {
       @include fz_vw(96);
       @include mr_vw(-2);
+
+      @include responsive(tab) {
+        @include fz_vw(70);
+      }
     }
   }
 
@@ -350,11 +409,22 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
 
+    @include responsive(lg) {
+      @include mt_vw(30);
+    }
+
     @include responsive(pc) {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       column-gap: 2rem;
       row-gap: 2rem;
+    }
+
+    @include responsive(tab) {
+      @include mt_vw(20);
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      row-gap: 3rem;
     }
   }
 
@@ -367,8 +437,16 @@
     height: 100%;
     overflow: hidden;
 
+    @include responsive(lg) {
+      @include h_vw(200);
+    }
+
     @include responsive(pc) {
       @include h_vw(280);
+    }
+
+    @include responsive(tab) {
+      height: auto;
     }
 
     &:hover img {
@@ -427,8 +505,15 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
     img {
       width: 100%;
+    }
+  }
+
+  &__works-button {
+    @include responsive(tab) {
+      bottom: -2.2%;
     }
   }
 
@@ -438,12 +523,22 @@
     width: calc(100vw - 200px);
     margin: 0 auto;
     z-index: 200;
+
+    @include responsive(tab) {
+      @include pb_vw(30);
+      width: 100vw;
+      margin: 0;
+    }
   }
 
   &__contact-title {
     position: relative;
     @include fz_vw(56);
     letter-spacing: 1.5px;
+
+    @include responsive(tab) {
+      @include fz_vw(40);
+    }
 
     &::after {
       content: 'こんたくと';
@@ -452,12 +547,20 @@
       right: 0;
       @include fz_vw(26);
       letter-spacing: 0px;
+
+      @include responsive(tab) {
+        @include fz_vw(18);
+      }
     }
 
     span {
       @include fz_vw(96);
       @include mr_vw(1);
       @include mb_vw(-1);
+
+      @include responsive(tab) {
+        @include fz_vw(70);
+      }
     }
   }
 
@@ -469,9 +572,17 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
 
+    @include responsive(lg) {
+      @include mt_vw(30);
+    }
+
     @include responsive(pc) {
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
+    }
+
+    @include responsive(tab) {
+      @include mt_vw(20);
     }
   }
 
@@ -482,6 +593,10 @@
     p {
       @include fz_vw(18);
       line-height: 2;
+
+      @include responsive(tab) {
+        @include fz_vw(12);
+      }
     }
   }
 
@@ -504,6 +619,10 @@
     width: fit-content;
     background: white;
 
+    @include responsive(lg) {
+      @include py_vw(20);
+    }
+
     @include responsive(pc) {
       @include py_vw(40);
       @include w_vw(560);
@@ -511,12 +630,8 @@
 
     @include responsive(tab) {
       @include px_vw(20);
-      @include mx_vw(10);
-      width: auto;
-
-      @media (orientation: landscape) {
-        @include mx_vw(30);
-      }
+      @include py_vw(30);
+      @include w_vw(286);
     }
   }
 
@@ -526,16 +641,16 @@
     align-items: center;
     @include mb_vw(6);
 
+    @include responsive(lg) {
+      @include fz_vw(16);
+    }
+
     @include responsive(pc) {
       @include fz_vw(20);
     }
 
     @include responsive(tab) {
-      @include fz_vw(16);
-
-      @media (orientation: landscape) {
-        @include fz_vw(14);
-      }
+      @include fz_vw(14);
     }
 
     span {
@@ -547,20 +662,26 @@
       color: white;
       background: rgb(199 0 0);
 
+      @include responsive(lg) {
+        @include fz_vw(13);
+      }
+
       @include responsive(pc) {
         @include fz_vw(17);
       }
 
       @include responsive(tab) {
-        @media (orientation: landscape) {
-          @include fz_vw(12);
-        }
+        @include fz_vw(12);
       }
     }
   }
 
   &__contact-form-text {
     @include mb_vw(12);
+
+    @include responsive(lg) {
+      @include mb_vw(6);
+    }
 
     input {
       @include mb_vw(4);
@@ -573,11 +694,7 @@
       }
 
       @include responsive(tab) {
-        width: 81vw;
-
-        @media (orientation: landscape) {
-          width: 72vw;
-        }
+        @include w_vw(282);
       }
     }
 
@@ -592,17 +709,18 @@
       border: none;
       background: $main;
 
+      @include responsive(lg) {
+        @include h_vw(120);
+      }
+
       @include responsive(pc) {
         @include w_vw(550);
         @include h_vw(220);
       }
 
       @include responsive(tab) {
-        width: 81vw;
-
-        @media (orientation: landscape) {
-          width: 72vw;
-        }
+        @include w_vw(282);
+        @include h_vw(160);
       }
     }
   }
@@ -693,6 +811,11 @@ $colors: (#d13447, #ffbf00, #263672);
   white-space: nowrap;
   border-radius: 16px;
   text-align: center;
+
+  @include responsive(tab) {
+    @include w_vw(300);
+    top: 98%;
+  }
 }
 .wpcf7 form.invalid .wpcf7-response-output,
 .wpcf7 form.unaccepted .wpcf7-response-output {/* 送信ボタン下未入力警告 */
