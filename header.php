@@ -116,13 +116,13 @@
 
         <div class="header__menu-link">
 
-          <a href="#about">
+          <a href="<?php echo home_url('about') ?>">
             <span>A</span>ABOUT
           </a>
-          <a href="#works">
+          <a href="<?php echo home_url('works') ?>">
             <span>W</span>WORKS
           </a>
-          <a href="#contact">
+          <a href="<?php echo home_url() ?>#contact">
             <span>C</span>CONTACT
           </a>
 

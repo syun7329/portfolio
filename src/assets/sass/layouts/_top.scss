@@ -484,6 +484,7 @@
 
   &__works-item-modal-title {
     @include fz_vw(22);
+    font-family: 'Noto Sans JP', sans-serif;;
     font-weight: 400;
     text-align: center;
   }

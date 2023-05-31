@@ -410,7 +410,7 @@
           </a>
           <div id="info-1" class="hide-area top__works-item-modal">
             <div class="top__works-item-modal-top">
-              <h3 class="top__works-item-modal-title">株式会社チャオチャオ餃子</h3>
+              <h3 class="top__works-item-modal-title">株式会社チャオチャオ餃子&nbsp;ホームページ</h3>
               <div class="top__works-item-modal-link">
                 <a href="https://chaochaogyoza.jp/">https://chaochaogyoza.jp/</a>
               </div>
@@ -431,7 +431,7 @@
           </a>
           <div id="info-2" class="hide-area top__works-item-modal">
             <div class="top__works-item-modal-top">
-              <h3 class="top__works-item-modal-title">出前寿司&nbsp;千両箱</h3>
+              <h3 class="top__works-item-modal-title">出前寿司&nbsp;千両箱&nbsp;ホームページ</h3>
               <div class="top__works-item-modal-link">
                 <a href="https://demae-sushi.jp/">https://demae-sushi.jp/</a>
               </div>
